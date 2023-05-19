@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Bolerplate.Components.Api/obj
+/Fraga.Components.Api/bin/Debug/net6.0
+/Fraga.Components.Api/obj
+/Fraga.Components.Application/bin/Debug/net6.0
+/Fraga.Components.Application/obj
+/Fraga.Components.Domain/bin/Debug/net6.0
+/Fraga.Components.Domain/obj
+/Fraga.Components.Infra.CrossCutting/obj
+/Fraga.Components.Infra.MongoDb/bin/Debug/net6.0
+/Fraga.Components.Infra.MongoDb/obj
+/Fraga.Components.MongoDb.Domain/bin/Debug/net6.0
+/Fraga.Components.MongoDb.Domain/obj
+/Fraga.Components.Shared/bin/Debug/net6.0
+/Fraga.Components.Shared/obj
