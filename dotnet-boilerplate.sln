@@ -15,17 +15,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Shared", "5 - Shared", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fraga.Components.Api", "Fraga.Components.Api\Fraga.Components.Api.csproj", "{F06CB4DB-C2C5-4A56-80B8-1737BF38586D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fraga.Components.Application", "Fraga.Components.Application\Fraga.Components.Application.csproj", "{0394004A-C723-4802-A177-BFB11E90DB0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fraga.Components.Application", "Fraga.Components.Application\Fraga.Components.Application.csproj", "{0394004A-C723-4802-A177-BFB11E90DB0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fraga.Components.Domain", "Fraga.Components.Domain\Fraga.Components.Domain.csproj", "{6634616A-95DC-447A-AE77-5A1CE53134D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fraga.Components.Domain", "Fraga.Components.Domain\Fraga.Components.Domain.csproj", "{6634616A-95DC-447A-AE77-5A1CE53134D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fraga.Components.Shared", "Fraga.Components.Shared\Fraga.Components.Shared.csproj", "{92E63058-8FD1-4E9E-B86F-C0C38CBE94BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fraga.Components.Shared", "Fraga.Components.Shared\Fraga.Components.Shared.csproj", "{92E63058-8FD1-4E9E-B86F-C0C38CBE94BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fraga.Components.Infra.MongoDb", "Fraga.Components.Infra.MongoDb\Fraga.Components.Infra.MongoDb.csproj", "{54EDBA66-E5C6-43A8-ABDA-AFE6C773E98E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fraga.Components.Infra.MongoDb", "Fraga.Components.Infra.MongoDb\Fraga.Components.Infra.MongoDb.csproj", "{54EDBA66-E5C6-43A8-ABDA-AFE6C773E98E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fraga.Components.Domain.MongoDb", "Fraga.Components.MongoDb.Domain\Fraga.Components.Domain.MongoDb.csproj", "{FA68DC04-4406-498D-8ABD-3F39A400BB0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fraga.Components.Domain.MongoDb", "Fraga.Components.MongoDb.Domain\Fraga.Components.Domain.MongoDb.csproj", "{FA68DC04-4406-498D-8ABD-3F39A400BB0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fraga.Components.Infra.CrossCutting", "Fraga.Components.Infra.CrossCutting\Fraga.Components.Infra.CrossCutting.csproj", "{9B7FAEE1-B1E7-4C10-9953-2BAD8883B7A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fraga.Components.Infra.CrossCutting", "Fraga.Components.Infra.CrossCutting\Fraga.Components.Infra.CrossCutting.csproj", "{9B7FAEE1-B1E7-4C10-9953-2BAD8883B7A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Playground", "0 - Playground", "{A9D20822-8CB9-40D2-83B7-BBE591313C54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Api", "TestApi.Api\TestApi.Api.csproj", "{B604644A-DCDE-490F-9B18-5D915B7CBF1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Application", "TestApi.Application\TestApi.Application.csproj", "{3FB76476-3E95-4F1C-A689-0122430660E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Domain", "TestApi.Domain\TestApi.Domain.csproj", "{95419EBC-AEDC-4956-8EF6-23E703966318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Infra", "TestApi.Infra\TestApi.Infra.csproj", "{3A5EEE79-DE6C-430C-A318-1D058D2D4437}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Shared", "TestApi.Shared\TestApi.Shared.csproj", "{49F96CB0-D03D-4A29-9874-FF33D435D68D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Infra.CrossCutting", "TestApi.Infra.CrossCutting\TestApi.Infra.CrossCutting.csproj", "{6E522D4F-54B2-4DE0-A5BE-8E2D7A6EE8DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +75,30 @@ Global
 		{9B7FAEE1-B1E7-4C10-9953-2BAD8883B7A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B7FAEE1-B1E7-4C10-9953-2BAD8883B7A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B7FAEE1-B1E7-4C10-9953-2BAD8883B7A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B604644A-DCDE-490F-9B18-5D915B7CBF1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B604644A-DCDE-490F-9B18-5D915B7CBF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B604644A-DCDE-490F-9B18-5D915B7CBF1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B604644A-DCDE-490F-9B18-5D915B7CBF1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB76476-3E95-4F1C-A689-0122430660E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB76476-3E95-4F1C-A689-0122430660E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB76476-3E95-4F1C-A689-0122430660E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB76476-3E95-4F1C-A689-0122430660E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95419EBC-AEDC-4956-8EF6-23E703966318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95419EBC-AEDC-4956-8EF6-23E703966318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95419EBC-AEDC-4956-8EF6-23E703966318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95419EBC-AEDC-4956-8EF6-23E703966318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A5EEE79-DE6C-430C-A318-1D058D2D4437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A5EEE79-DE6C-430C-A318-1D058D2D4437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A5EEE79-DE6C-430C-A318-1D058D2D4437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A5EEE79-DE6C-430C-A318-1D058D2D4437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F96CB0-D03D-4A29-9874-FF33D435D68D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F96CB0-D03D-4A29-9874-FF33D435D68D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F96CB0-D03D-4A29-9874-FF33D435D68D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F96CB0-D03D-4A29-9874-FF33D435D68D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E522D4F-54B2-4DE0-A5BE-8E2D7A6EE8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E522D4F-54B2-4DE0-A5BE-8E2D7A6EE8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E522D4F-54B2-4DE0-A5BE-8E2D7A6EE8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E522D4F-54B2-4DE0-A5BE-8E2D7A6EE8DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +111,12 @@ Global
 		{54EDBA66-E5C6-43A8-ABDA-AFE6C773E98E} = {844B65D6-17E3-4996-983C-AC6BB4A0ACEA}
 		{FA68DC04-4406-498D-8ABD-3F39A400BB0A} = {A7AA9219-CC63-400B-B869-F600144A50EE}
 		{9B7FAEE1-B1E7-4C10-9953-2BAD8883B7A8} = {844B65D6-17E3-4996-983C-AC6BB4A0ACEA}
+		{B604644A-DCDE-490F-9B18-5D915B7CBF1C} = {A9D20822-8CB9-40D2-83B7-BBE591313C54}
+		{3FB76476-3E95-4F1C-A689-0122430660E1} = {A9D20822-8CB9-40D2-83B7-BBE591313C54}
+		{95419EBC-AEDC-4956-8EF6-23E703966318} = {A9D20822-8CB9-40D2-83B7-BBE591313C54}
+		{3A5EEE79-DE6C-430C-A318-1D058D2D4437} = {A9D20822-8CB9-40D2-83B7-BBE591313C54}
+		{49F96CB0-D03D-4A29-9874-FF33D435D68D} = {A9D20822-8CB9-40D2-83B7-BBE591313C54}
+		{6E522D4F-54B2-4DE0-A5BE-8E2D7A6EE8DC} = {A9D20822-8CB9-40D2-83B7-BBE591313C54}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC93B711-2868-4A48-9DD1-32201683CBC7}
