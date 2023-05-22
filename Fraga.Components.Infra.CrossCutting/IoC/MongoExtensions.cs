@@ -2,11 +2,10 @@ using Fraga.Components.Domain.MongoDb.Repositories.Base;
 using Fraga.Components.Infra.MongoDb.DbSettings;
 using Fraga.Components.Infra.MongoDb.Repositories.Base;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 
-namespace Fraga.Components.Infra.CrossCutting.IoC
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class MongoExtensions
     {
