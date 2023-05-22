@@ -32,3 +32,16 @@
 /TestApi.Api/obj
 /TestApi.Api/appsettings.Development.json
 /TestApi.Api/appsettings.json
+/Playground/TestApi.Api/bin/Debug/net6.0
+/Playground/TestApi.Api/obj
+/Playground/TestApi.Application/bin/Debug/net6.0
+/Playground/TestApi.Application/obj
+/Playground/TestApi.Domain/bin/Debug/net6.0
+/Playground/TestApi.Domain/obj
+/Playground/TestApi.Infra/bin/Debug/net6.0
+/Playground/TestApi.Infra/obj
+/Playground/TestApi.Infra.CrossCutting/bin/Debug/net6.0
+/Playground/TestApi.Infra.CrossCutting/obj
+/Playground/TestApi.Shared/bin/Debug/net6.0
+/Playground/TestApi.Shared/obj/Debug/net6.0/ref/TestApi.Shared.dll
+/Playground/TestApi.Shared/obj

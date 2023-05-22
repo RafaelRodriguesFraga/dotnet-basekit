@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Fraga.Components.Application\Fraga.Components.Application.csproj" />
-    <ProjectReference Include="..\TestApi.Domain\TestApi.Domain.csproj" />
+    <ProjectReference Include="..\..\Fraga.Components.Shared\Fraga.Components.Shared.csproj" />
   </ItemGroup>
 
 </Project>

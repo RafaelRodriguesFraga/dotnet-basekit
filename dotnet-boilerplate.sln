@@ -29,17 +29,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fraga.Components.Infra.Cros
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Playground", "0 - Playground", "{A9D20822-8CB9-40D2-83B7-BBE591313C54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Api", "TestApi.Api\TestApi.Api.csproj", "{B604644A-DCDE-490F-9B18-5D915B7CBF1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Api", "Playground\TestApi.Api\TestApi.Api.csproj", "{B604644A-DCDE-490F-9B18-5D915B7CBF1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Application", "TestApi.Application\TestApi.Application.csproj", "{3FB76476-3E95-4F1C-A689-0122430660E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Application", "Playground\TestApi.Application\TestApi.Application.csproj", "{3FB76476-3E95-4F1C-A689-0122430660E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Domain", "TestApi.Domain\TestApi.Domain.csproj", "{95419EBC-AEDC-4956-8EF6-23E703966318}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Domain", "Playground\TestApi.Domain\TestApi.Domain.csproj", "{95419EBC-AEDC-4956-8EF6-23E703966318}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Infra", "TestApi.Infra\TestApi.Infra.csproj", "{3A5EEE79-DE6C-430C-A318-1D058D2D4437}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Infra", "Playground\TestApi.Infra\TestApi.Infra.csproj", "{3A5EEE79-DE6C-430C-A318-1D058D2D4437}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Shared", "TestApi.Shared\TestApi.Shared.csproj", "{49F96CB0-D03D-4A29-9874-FF33D435D68D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Shared", "Playground\TestApi.Shared\TestApi.Shared.csproj", "{49F96CB0-D03D-4A29-9874-FF33D435D68D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Infra.CrossCutting", "TestApi.Infra.CrossCutting\TestApi.Infra.CrossCutting.csproj", "{6E522D4F-54B2-4DE0-A5BE-8E2D7A6EE8DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi.Infra.CrossCutting", "Playground\TestApi.Infra.CrossCutting\TestApi.Infra.CrossCutting.csproj", "{6E522D4F-54B2-4DE0-A5BE-8E2D7A6EE8DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

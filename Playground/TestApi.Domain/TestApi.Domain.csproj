@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Fraga.Components.MongoDb.Domain\Fraga.Components.Domain.MongoDb.csproj" />
+    <ProjectReference Include="..\..\Fraga.Components.MongoDb.Domain\Fraga.Components.Domain.MongoDb.csproj" />
   </ItemGroup>
 
 </Project>
