@@ -45,3 +45,16 @@
 /Playground/TestApi.Shared/bin/Debug/net6.0
 /Playground/TestApi.Shared/obj/Debug/net6.0/ref/TestApi.Shared.dll
 /Playground/TestApi.Shared/obj
+/Fraga.Components.Api/bin
+/Fraga.Components.Application/bin/Release/net6.0
+/Fraga.Components.Domain/bin/Release/net6.0
+/Fraga.Components.Infra.CrossCutting/bin/Release/net6.0
+/Fraga.Components.Infra.MongoDb/bin/Release/net6.0
+/Fraga.Components.MongoDb.Domain/bin/Release/net6.0
+/Fraga.Components.Shared/bin/Release/net6.0
+/Playground/TestApi.Api/bin/Release/net6.0
+/Playground/TestApi.Application/bin/Release/net6.0
+/Playground/TestApi.Domain/bin/Release/net6.0
+/Playground/TestApi.Infra/bin/Release/net6.0
+/Playground/TestApi.Infra.CrossCutting/bin/Release/net6.0
+/Playground/TestApi.Shared/bin/Release/net6.0
