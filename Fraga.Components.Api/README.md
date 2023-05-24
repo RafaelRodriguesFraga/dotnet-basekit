@@ -25,7 +25,7 @@
 
 The `Fraga.Components.Api` package provides common functionality for WebApi Applications. It has `ApiControllerBase` that extends the `ControllerBase` class from Microsoft.AspNetCore.Mvc and encapsulates common response creation and handling logic.
 
-## [Usage](https://chat.openai.com/c/981e0f46-96db-4310-9bc0-38f4fc6b7db1#usage)
+## Usage
 
 To use the `Fraga.Components.Api`, first you need to import the package and derive your controller from `ApiControllerBase`
 
