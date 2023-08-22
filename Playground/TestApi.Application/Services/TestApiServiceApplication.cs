@@ -1,6 +1,6 @@
 ﻿
-using Fraga.Components.Application.Base;
-using Fraga.Components.Shared.Notifications;
+using DotnetBoilerplate.Components.Application.Base;
+using DotnetBoilerplate.Components.Shared.Notifications;
 using TestApi.Application.ViewModels;
 using TestApi.Domain.Repositories;
 

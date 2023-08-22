@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Shared\DotnetBoilerplate.Components.Shared.csproj" />
+    <PackageReference Include="FluentValidation" Version="11.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotnetBoilerplate.Components.Shared\DotnetBoilerplate.Components.Shared.csproj" />
   </ItemGroup>
 
 </Project>

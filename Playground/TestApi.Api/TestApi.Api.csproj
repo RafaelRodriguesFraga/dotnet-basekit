@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Fraga.Components.Api\Fraga.Components.Api.csproj" />
-    <ProjectReference Include="..\..\Fraga.Components.Application\Fraga.Components.Application.csproj" />
-    <ProjectReference Include="..\..\Fraga.Components.Infra.CrossCutting\Fraga.Components.Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Api\DotnetBoilerplate.Components.Api.csproj" />
+    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Application\DotnetBoilerplate.Components.Application.csproj" />
+    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Infra.CrossCutting\DotnetBoilerplate.Components.Infra.CrossCutting.csproj" />
     <ProjectReference Include="..\TestApi.Infra.CrossCutting\TestApi.Infra.CrossCutting.csproj" />
   </ItemGroup>
 

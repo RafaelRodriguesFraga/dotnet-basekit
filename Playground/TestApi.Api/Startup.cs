@@ -1,7 +1,7 @@
-﻿using Fraga.Components.Api.Responses;
-using Fraga.Components.Application.Base;
-using Fraga.Components.Application.Pagination;
-using Fraga.Components.Shared.Notifications;
+﻿using DotnetBoilerplate.Components.Api.Responses;
+using DotnetBoilerplate.Components.Application.Base;
+using DotnetBoilerplate.Components.Application.Pagination;
+using DotnetBoilerplate.Components.Shared.Notifications;
 using TestApi.Infra.CrossCutting.IoC;
 
 namespace TestApi.Api

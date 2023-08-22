@@ -1,4 +1,4 @@
-﻿using Fraga.Components.Domain.MongoDb.Entities.Base;
+﻿using DotnetBoilerplate.Components.Domain.MongoDb.Entities.Base;
 
 namespace TestApi.Domain.Entities
 {

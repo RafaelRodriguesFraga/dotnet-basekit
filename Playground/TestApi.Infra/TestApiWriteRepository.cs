@@ -1,5 +1,5 @@
-﻿using Fraga.Components.Infra.MongoDb.DbSettings;
-using Fraga.Components.Infra.MongoDb.Repositories.Base;
+﻿using DotnetBoilerplate.Components.Infra.MongoDb.DbSettings;
+using DotnetBoilerplate.Components.Infra.MongoDb.Repositories.Base;
 using TestApi.Domain.Entities;
 using TestApi.Domain.Repositories;
 

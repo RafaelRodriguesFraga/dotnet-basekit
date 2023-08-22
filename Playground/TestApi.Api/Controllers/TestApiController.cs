@@ -1,5 +1,5 @@
-﻿using Fraga.Components.Api.Base;
-using Fraga.Components.Api.Responses;
+﻿using DotnetBoilerplate.Components.Api.Base;
+using DotnetBoilerplate.Components.Api.Responses;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.CompilerServices;

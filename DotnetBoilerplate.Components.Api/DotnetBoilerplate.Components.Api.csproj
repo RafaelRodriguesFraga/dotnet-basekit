@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Rafael Fraga</Authors>
+    <Company>Rafael Fraga</Company>
+	<Version>1.0.1</Version>
+	<PackageTags>api, ddd, components, components.api</PackageTags>
+	<IncludeSymbols>False</IncludeSymbols>
+	<Title>DotnetBoilerplate.Components.Api</Title>
+	<Description>Creates base configurations and custom responses for WebApi projects </Description>
+	<PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotnetBoilerplate.Components.Application\DotnetBoilerplate.Components.Application.csproj" />
+    <ProjectReference Include="..\DotnetBoilerplate.Components.Shared\DotnetBoilerplate.Components.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
