@@ -92,3 +92,7 @@
 /DotnetBoilerplate.Components.Shared/bin/Release/net6.0
 /DotnetBoilerplate.Components.Application/bin/Release
 /DotnetBoilerplate.Components.Shared/bin/Release
+/DotnetBoilerplate.Components.Domain.Sql/bin/Release
+/DotnetBoilerplate.Components.Infra.MongoDb/bin/Release
+/DotnetBoilerplate.Components.Infra.Sql/bin/Release
+/DotnetBoilerplate.Components.MongoDb.Domain/bin/Release
