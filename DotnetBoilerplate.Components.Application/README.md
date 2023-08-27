@@ -8,7 +8,7 @@ This documentation provides an overview of its purpose, structure, and usage for
 
 -   [Overview](#overview)
 -   [1. BaseServiceApplication](#1-baseserviceapplication)
-    -   [1.1. Class Overview](#1-1-class-ovewview)
+    -   [1.1. Class Overview](#11-class-ovewview)
     -   [1.2. Constructor](#1-2-constructor)
     -   [1.3. Parameters](#1-3-parameters)
     -   [1.4. Properties](#1-4-properties)
