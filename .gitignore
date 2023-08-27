@@ -87,3 +87,8 @@
 /TestApi.Infra.Sql/obj
 /DotnetBoilerplate.Components.Domain.Sql/bin/Debug/net6.0
 /DotnetBoilerplate.Components.Domain.Sql/obj
+/DotnetBoilerplate.Components.Api/bin/Release
+/DotnetBoilerplate.Components.Application/bin/Release/net6.0
+/DotnetBoilerplate.Components.Shared/bin/Release/net6.0
+/DotnetBoilerplate.Components.Application/bin/Release
+/DotnetBoilerplate.Components.Shared/bin/Release
