@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Rafael Fraga</Authors>
     <Company>Rafael Fraga</Company>
-	<Version>1.0.1</Version>
+	<Version>2.0.0</Version>
 	<PackageTags>api, ddd, components, components.api</PackageTags>
 	<IncludeSymbols>False</IncludeSymbols>
 	<Title>DotnetBoilerplate.Components.Api</Title>
