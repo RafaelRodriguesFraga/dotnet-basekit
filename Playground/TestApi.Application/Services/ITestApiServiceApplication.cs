@@ -4,6 +4,6 @@ namespace TestApi.Application.Services
 {
     public interface ITestApiServiceApplication
     {
-        Task CreateAsync(TestApiViewModel viewModel);
+        Task CreateAsync(TestApiViewModel viewModel);       
     }
 }

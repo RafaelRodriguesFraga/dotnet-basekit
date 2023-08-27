@@ -9,6 +9,8 @@ namespace TestApi.Infra.CrossCutting.IoC
         public static IServiceCollection AddRepository(this IServiceCollection services)
         {
             services.AddScoped<ITestApiWriteRepository, TestApiWriteRepository>();
+            services.AddScoped<ITestApiSqlWriteRepository, TestApiSqlWriteRepository>();
+            services.AddScoped<ITestApiSqlReadRepository, TestApiSqlReadRepository>();
 
             return services;
         }

@@ -15,5 +15,10 @@ namespace TestApi.Application.ViewModels
         {
             return new Test(test.TestString);
         }
+
+        public static implicit operator TestSql(TestApiViewModel test)
+        {
+            return new TestSql(test.TestString);
+        }
     }
 }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,14 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\DotnetBoilerplate.Components.Api\DotnetBoilerplate.Components.Api.csproj" />
     <ProjectReference Include="..\..\DotnetBoilerplate.Components.Application\DotnetBoilerplate.Components.Application.csproj" />
-    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Infra.CrossCutting\DotnetBoilerplate.Components.Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Infra.MongoDb\DotnetBoilerplate.Components.Infra.MongoDb.csproj" />
+    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Infra.Sql\DotnetBoilerplate.Components.Infra.Sql.csproj" />
     <ProjectReference Include="..\TestApi.Infra.CrossCutting\TestApi.Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\TestApi.Infra.Sql\TestApi.Infra.Sql.csproj" />
   </ItemGroup>
 
 </Project>

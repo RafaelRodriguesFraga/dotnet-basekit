@@ -9,9 +9,10 @@ namespace TestApi.Application.Services
     public class TestApiServiceApplication : BaseServiceApplication, ITestApiServiceApplication
     {
         private readonly ITestApiWriteRepository _testApiWriteRepository;
-        public TestApiServiceApplication(NotificationContext notificationContext, ITestApiWriteRepository testApiWriteRepository) : base(notificationContext)
+       
+        public TestApiServiceApplication(NotificationContext notificationContext, ITestApiWriteRepository testApiSqlWriteRepository) : base(notificationContext)
         {
-            _testApiWriteRepository = testApiWriteRepository;
+            _testApiWriteRepository = testApiSqlWriteRepository;
         }
 
         public async Task CreateAsync(TestApiViewModel viewModel)

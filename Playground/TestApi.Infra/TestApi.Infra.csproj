@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\DotnetBoilerplate.Components.Infra.MongoDb\DotnetBoilerplate.Components.Infra.MongoDb.csproj" />
+    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Infra.Sql\DotnetBoilerplate.Components.Infra.Sql.csproj" />
     <ProjectReference Include="..\TestApi.Domain\TestApi.Domain.csproj" />
   </ItemGroup>
 

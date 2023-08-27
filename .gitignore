@@ -78,3 +78,12 @@
 /DotnetBoilerplate.Components.Shared/.vs/DotnetBoilerplate.Components.Shared
 /DotnetBoilerplate.Components.Shared/bin/Debug
 /DotnetBoilerplate.Components.Shared/obj
+/DotnetBoilerplate.Components.Infra.Sql/bin/Debug/net6.0
+/DotnetBoilerplate.Components.Infra.Sql/obj
+/Playground/TestApi.Api/appsettings.json
+/Playground/TestApi.Infra.Sql/bin/Debug/net6.0
+/Playground/TestApi.Infra.Sql/obj
+/TestApi.Infra.Sql/bin/Debug/net6.0
+/TestApi.Infra.Sql/obj
+/DotnetBoilerplate.Components.Domain.Sql/bin/Debug/net6.0
+/DotnetBoilerplate.Components.Domain.Sql/obj

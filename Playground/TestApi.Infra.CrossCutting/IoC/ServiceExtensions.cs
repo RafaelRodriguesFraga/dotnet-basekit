@@ -9,6 +9,7 @@ namespace TestApi.Infra.CrossCutting.IoC
         public static IServiceCollection AddServiceApplication(this IServiceCollection services)
         {
             services.AddScoped<ITestApiServiceApplication, TestApiServiceApplication>();
+            services.AddScoped<ITestApiSqlServiceApplication, TestApiSqlServiceApplication>();
 
             return services;
         }
