@@ -1,4 +1,4 @@
-namespace DotnetBoilerplate.Components.Domain.Entities.Base
+namespace DotnetBoilerplate.Components.Domain.Sql.Entities.Base
 {
     public interface IBaseEntity
     {

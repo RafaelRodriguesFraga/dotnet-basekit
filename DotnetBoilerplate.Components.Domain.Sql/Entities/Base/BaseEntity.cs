@@ -1,7 +1,7 @@
 ﻿using DotnetBoilerplate.Components.Shared.Notifications;
 using FluentValidation.Results;
 
-namespace DotnetBoilerplate.Components.Domain.Entities.Base
+namespace DotnetBoilerplate.Components.Domain.Sql.Entities.Base
 {
     public abstract class BaseEntity : Notifiable<Notification>, IBaseEntity
     {
