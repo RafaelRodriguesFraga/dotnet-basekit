@@ -4,6 +4,7 @@ using DotnetBoilerplate.Components.Shared.Notifications;
 using TestApi.Application.ViewModels;
 using TestApi.Domain.Entities;
 using TestApi.Domain.Repositories;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TestApi.Application.Services
 {
@@ -45,6 +46,6 @@ namespace TestApi.Application.Services
 
             await _testApiSqlWriteRepository.DeleteAsync(test);
 
-        }
+        }      
     }
 }

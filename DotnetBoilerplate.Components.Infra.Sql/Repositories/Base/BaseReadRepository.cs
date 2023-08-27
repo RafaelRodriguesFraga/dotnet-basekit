@@ -15,9 +15,24 @@ namespace DotnetBoilerplate.Components.Infra.Sql.Repositories.Base
             _context = context;
             Set = _context.Set<TEntity>();
         }
+        public TEntity GetById(Guid id)
+        {
+            return Set.Find(id);
+        }
+
         public async Task<TEntity> GetByIdAsync(Guid id)
         {
             return await Set.FindAsync(id);
         }
+
+        public IEnumerable<TEntity> GetAll()
+        {
+            return Set.ToList();
+        }
+
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
+        {
+            return await Set.ToListAsync();
+        }            
     }
 }

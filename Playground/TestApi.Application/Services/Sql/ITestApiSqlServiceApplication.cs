@@ -1,4 +1,5 @@
 ﻿using TestApi.Application.ViewModels;
+using TestApi.Domain.Entities;
 
 namespace TestApi.Application.Services
 {

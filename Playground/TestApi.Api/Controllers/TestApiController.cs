@@ -1,8 +1,6 @@
 ﻿using DotnetBoilerplate.Components.Api.Base;
 using DotnetBoilerplate.Components.Api.Responses;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Runtime.CompilerServices;
 using TestApi.Application.Services;
 using TestApi.Application.ViewModels;
 
