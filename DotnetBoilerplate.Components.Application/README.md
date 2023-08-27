@@ -17,8 +17,8 @@ This documentation provides an overview of its purpose, structure, and usage for
     -   [2.1. Class Overview](#21-class-overview)
     -   [2.2. Constructors](#22-constructors)
     -   [2.3. Properties](#23-properties)
-    -   [2.4. Usage](24-usage)      
-- [3. Conclusion](#conclusion) 
+    -   [2.4. Usage](#24-usage)      
+- [3. Conclusion](#3-conclusion) 
   
 </details>
 
