@@ -48,12 +48,39 @@ The BaseServiceApplication class does not introduce any additional properties (f
 
 ## 1.5. Usage
 
+
 The primary purpose of the BaseServiceApplication class is to serve as a base class for other service application components. By inheriting from this class, developers can take advantage of its notification handling capabilities and maintain a consistent approach to managing notifications across the application.
 
-To use the `DotnetBoilerplate.Components.Application`, first you need to import the package and derive your controller from `BaseServiceApplication`
+First, you have to install this package via Nuget or .NET CLI. 
 
-```csharp     
-   
+If you're using Package Manager Console: 
+
+`Install-Package DotnetBoilerplate.Components.Application`
+
+Or if you're using the .NET CLI: 
+
+`dotnet add package DotnetBoilerplate.Components.Application`
+
+Now, in your `Program.cs` file, add the dependency that contains BaseServiceApplication interface and Pagination:
+
+```csharp
+// other dependencies
+
+builder.Services.AddApplication();
+```
+Or if you have a `Startup.cs` file, add in your Configure Services method: 
+
+```csharp
+// other dependencies
+
+services.AddApplication();
+```
+
+*If you having trouble, see the TestApi Playground Startup.cs for more details.*
+
+With the dependencies added, you're ready to use it like below. You need to derive your service from `BaseServiceApplication`
+
+```csharp  
    using DotnetBoilerplate.Components.Application.Base;
    using DotnetBoilerplate.Components.Shared.Notifications;
 
@@ -69,10 +96,9 @@ To use the `DotnetBoilerplate.Components.Application`, first you need to import 
              // Initialize your interfaces
            }
 
-            // implementation for IYouServiceApplication
+            // implementation for IYourServiceApplication
        }
-   }
-  
+   }  
 ``` 
 
 In practice, developers can create new service applications by inheriting from the BaseServiceApplication class and implementing the necessary business logic specific to their use case. The constructor ensures that each service application instance has access to a shared NotificationContext instance for handling notifications.

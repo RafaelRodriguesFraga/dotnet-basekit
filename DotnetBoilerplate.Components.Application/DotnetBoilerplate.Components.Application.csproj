@@ -7,7 +7,7 @@
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <Authors>Rafael Fraga</Authors>
       <Company>Rafael Fraga</Company>
-	  <Version>2.0.0</Version>
+	  <Version>2.0.1</Version>
 	  <PackageTags>api, ddd, components, components.api</PackageTags>
 	  <IncludeSymbols>False</IncludeSymbols>
 	  <Title>DotnetBoilerplate.Components.Application</Title>
@@ -16,6 +16,10 @@
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DotnetBoilerplate.Components.Shared\DotnetBoilerplate.Components.Shared.csproj" />
