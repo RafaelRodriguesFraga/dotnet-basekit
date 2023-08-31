@@ -96,3 +96,8 @@
 /DotnetBoilerplate.Components.Infra.MongoDb/bin/Release
 /DotnetBoilerplate.Components.Infra.Sql/bin/Release
 /DotnetBoilerplate.Components.MongoDb.Domain/bin/Release
+/Playground/TestApi.Infra.Sql/bin/Release/net6.0
+/DotnetBoilerplate.Components.MongoDb.Domain/bin/Debug
+/DotnetBoilerplate.Components.Infra.Sql/bin/Debug
+/DotnetBoilerplate.Components.Infra.MongoDb/bin/Debug
+/DotnetBoilerplate.Components.Domain.Sql/bin/Debug
