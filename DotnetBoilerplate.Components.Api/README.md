@@ -100,6 +100,34 @@ This method creates a basic API response for a successful resource creation oper
 This method creates a BadRequest response with the provided data object. It returns an `IActionResult` representing the HTTP Response BadRequest (400).
   
 ## Fully Usage Example
+First, you have to install this package via Nuget or .NET CLI. 
+
+If you're using Package Manager Console: 
+
+`Install-Package DotnetBoilerplate.Components.Api`
+
+Or if you're using the .NET CLI: 
+
+`dotnet add package DotnetBoilerplate.Components.Api`
+
+Now, in your `Program.cs` file, add the dependency that contains Responses and Notifications:
+
+```csharp
+// other dependencies
+
+builder.Services.AddApi();
+```
+Or if you have a `Startup.cs` file, add in your Configure Services method: 
+
+```csharp
+// other dependencies
+
+services.AddApi();
+```
+
+*If you having trouble, see the TestApi Playground Startup.cs for more details.*
+
+With the dependencies added, you're ready to use it like below
 
  ```csharp  
   
@@ -139,8 +167,8 @@ In this example, a TestService is called from the Application Layer. It accepts 
 
 ## Inspiration
 
-This package was based on [Optsol.Components.Service](https://www.nuget.org/packages/Optsol.Components.Service). The whole set of components ( `DotnetBoilerplate.Components.Api`, `DotnetBoilerplate.Components.Application`, `DotnetBoilerplate.Components.Domain`, `DotnetBoilerplate.Components.Domain.MongoDb`, `DotnetBoilerplate.Components.Infra.CrossCutting`, `DotnetBoilerplate.Components.Infra.MongoDb`, `DotnetBoilerplate.Components.Shared` ) is a bolierplate that was developed to make things a little bit easier for some people (and for learning purposes too)  
-  
+This package was based on [Optsol.Components.Service](https://www.nuget.org/packages/Optsol.Components.Service). The whole set of components ( `DotnetBoilerplate.Components.Api`, `DotnetBoilerplate.Components.Application`, `DotnetBoilerplate.Components.Domain.MongoDb`,  `DotnetBoilerplate.Components.Domain.Sql`, `DotnetBoilerplate.Components.Infra.MongoDb`, `DotnetBoilerplate.Components.Infra.Sql`, `DotnetBoilerplate.Components.Shared` ) is a bolierplate that was developed to make things a little bit easier for some people (and for learning purposes too) 
+
 ## Conclusion
 
 The `DotnetBoilerplate.Components.Api` package provides a set of methods that simplify the creation and handling of API responses in the WebApi Applications. By deriving your API controllers from `ApiControllerBase`, you can take advantage of the common response creation logic and ensure consistent error handling throughout your API.
