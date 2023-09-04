@@ -101,3 +101,5 @@
 /DotnetBoilerplate.Components.Infra.Sql/bin/Debug
 /DotnetBoilerplate.Components.Infra.MongoDb/bin/Debug
 /DotnetBoilerplate.Components.Domain.Sql/bin/Debug
+/DotnetBoilerplate.Components.Domain.MongoDb/bin
+/DotnetBoilerplate.Components.Domain.MongoDb/obj
