@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TestApi.Domain.Entities;
+﻿using TestApi.Domain.Entities;
 
 namespace TestApi.Application.ViewModels
 {
@@ -20,5 +15,5 @@ namespace TestApi.Application.ViewModels
         {
             return new TestSql(test.TestString);
         }
-    }
+    }   
 }
