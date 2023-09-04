@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetBoilerplate.Component
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetBoilerplate.Components.Infra.MongoDb", "DotnetBoilerplate.Components.Infra.MongoDb\DotnetBoilerplate.Components.Infra.MongoDb.csproj", "{54EDBA66-E5C6-43A8-ABDA-AFE6C773E98E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetBoilerplate.Components.Domain.MongoDb", "DotnetBoilerplate.Components.MongoDb.Domain\DotnetBoilerplate.Components.Domain.MongoDb.csproj", "{FA68DC04-4406-498D-8ABD-3F39A400BB0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetBoilerplate.Components.Domain.MongoDb", "DotnetBoilerplate.Components.Domain.MongoDb\DotnetBoilerplate.Components.Domain.MongoDb.csproj", "{FA68DC04-4406-498D-8ABD-3F39A400BB0A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Playground", "0 - Playground", "{A9D20822-8CB9-40D2-83B7-BBE591313C54}"
 EndProject
@@ -81,6 +81,7 @@ Global
 		{3FB76476-3E95-4F1C-A689-0122430660E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FB76476-3E95-4F1C-A689-0122430660E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FB76476-3E95-4F1C-A689-0122430660E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95419EBC-AEDC-4956-8EF6-23E703966318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95419EBC-AEDC-4956-8EF6-23E703966318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95419EBC-AEDC-4956-8EF6-23E703966318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95419EBC-AEDC-4956-8EF6-23E703966318}.Release|Any CPU.ActiveCfg = Release|Any CPU
