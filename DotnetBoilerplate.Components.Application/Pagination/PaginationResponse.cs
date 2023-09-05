@@ -2,23 +2,19 @@
 {
     public class PaginationResponse<TData> : IPaginationResponse<TData> where TData : class
     {
-        public PaginationResponse(int currentPage, int totalPages)
+        public PaginationResponse(int currentPage, int quantityPerPage, long totalRecords, IEnumerable<TData> data)
         {
             CurrentPage = currentPage;
-            TotalPages = totalPages;
-        }
-
-        public PaginationResponse(IEnumerable<TData> data, int currentPage, int totalPages, long totalRecords)
-        {
-            Data = data;
-            CurrentPage = currentPage;
-            TotalPages = totalPages;
+            QuantityPerPage = quantityPerPage;
             TotalRecords = totalRecords;
+            TotalPages = (int)Math.Ceiling((double)totalRecords / (double)quantityPerPage);
+            Data = data;
         }
 
-        public IEnumerable<TData> Data {get; set;}
-        public int CurrentPage {get; set;}    
-        public int TotalPages {get; set;}
-        public long TotalRecords {get; set;}      
+        public int CurrentPage { get; set; }
+        public int QuantityPerPage { get; set; }
+        public long TotalRecords { get; set; }
+        public int TotalPages { get; set; }
+        public IEnumerable<TData> Data { get; set; }
     }
 }
