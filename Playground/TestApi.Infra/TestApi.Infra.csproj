@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Domain.MongoDb\DotnetBoilerplate.Components.Domain.MongoDb.csproj" />
     <ProjectReference Include="..\..\DotnetBoilerplate.Components.Infra.MongoDb\DotnetBoilerplate.Components.Infra.MongoDb.csproj" />
     <ProjectReference Include="..\..\DotnetBoilerplate.Components.Infra.Sql\DotnetBoilerplate.Components.Infra.Sql.csproj" />
     <ProjectReference Include="..\TestApi.Domain\TestApi.Domain.csproj" />
