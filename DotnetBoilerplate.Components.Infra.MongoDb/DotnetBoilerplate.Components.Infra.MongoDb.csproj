@@ -7,7 +7,7 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Authors>Rafael Fraga</Authors>
 		<Company>Rafael Fraga</Company>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<PackageTags>infra, nosql, mongodb, components.infra.mongodb</PackageTags>
 		<IncludeSymbols>False</IncludeSymbols>
 		<Title>DotnetBoilerplate.Components.Infra.MongoDb</Title>
