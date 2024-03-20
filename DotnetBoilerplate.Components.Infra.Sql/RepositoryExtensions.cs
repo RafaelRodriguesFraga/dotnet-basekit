@@ -30,7 +30,7 @@ namespace DotnetBoilerplate.Components.Infra.Sql
                     break;
 
                 case "Postgres":
-                    connectionString = configuration.GetConnectionString("SqlServerConnection");
+                    connectionString = configuration.GetConnectionString("PostgresConnection");
 
                     services.AddDbContext<TContext>(options => options.UseNpgsql(connectionString, optionsBuilder => optionsBuilder.MigrationsAssembly(typeof(TContext).Assembly.FullName)));
                     break;
