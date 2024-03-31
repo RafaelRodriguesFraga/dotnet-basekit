@@ -47,8 +47,8 @@ namespace DotnetBoilerplate.Components.Shared.Notifications
             _notifications.Clear();
         }
 
-        protected bool Valid => _notifications.Any() == false;
+        public bool Valid => _notifications.Any() == false;
 
-        protected bool Invalid => !Valid;
+        public bool Invalid => !Valid;
     }
 }
