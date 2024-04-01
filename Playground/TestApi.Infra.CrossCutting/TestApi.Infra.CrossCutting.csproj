@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Domain.MongoDb\DotnetBoilerplate.Components.Domain.MongoDb.csproj" />
+    <ProjectReference Include="..\..\DotnetBaseKit.Components.Domain.MongoDb\DotnetBaseKit.Components.Domain.MongoDb.csproj" />
     <ProjectReference Include="..\TestApi.Application\TestApi.Application.csproj" />
     <ProjectReference Include="..\TestApi.Domain\TestApi.Domain.csproj" />
     <ProjectReference Include="..\TestApi.Infra\TestApi.Infra.csproj" />

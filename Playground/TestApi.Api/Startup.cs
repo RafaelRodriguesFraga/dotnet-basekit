@@ -1,6 +1,6 @@
-﻿using DotnetBoilerplate.Components.Application;
-using DotnetBoilerplate.Components.Infra.Sql;
-using DotnetBoilerplate.Components.Api;
+﻿using DotnetBaseKit.Components.Application;
+using DotnetBaseKit.Components.Infra.Sql;
+using DotnetBaseKit.Components.Api;
 using TestApi.Infra.CrossCutting.IoC;
 using TestApi.Infra.Sql.Context;
 

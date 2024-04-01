@@ -1,4 +1,4 @@
-﻿using DotnetBoilerplate.Components.Infra.Sql.Context.Base;
+﻿using DotnetBaseKit.Components.Infra.Sql.Context.Base;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

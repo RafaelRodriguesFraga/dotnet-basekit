@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DotnetBoilerplate.Components.MongoDb.Domain\DotnetBoilerplate.Components.Domain.MongoDb.csproj" />
+    <ProjectReference Include="..\..\DotnetBaseKit.Components.MongoDb.Domain\DotnetBaseKit.Components.Domain.MongoDb.csproj" />
   </ItemGroup>
 
 </Project>

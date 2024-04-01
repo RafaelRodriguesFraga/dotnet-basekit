@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Authors>Rafael Fraga</Authors>
+    <Company>Rafael Fraga</Company>
+	  <Version>3.1.2</Version>
+	  <PackageTags>api, ddd, components, components.application</PackageTags>
+	  <IncludeSymbols>False</IncludeSymbols>
+	  <Title>DotnetBaseKit.Components.Application</Title>
+	  <Description>Creates base configurations for Application Layer</Description>
+	  <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\DotnetBaseKit.Components.Shared\DotnetBaseKit.Components.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,4 +1,4 @@
-﻿using DotnetBoilerplate.Components.Domain.MongoDb.Entities.Base;
+﻿using DotnetBaseKit.Components.Domain.MongoDb.Entities.Base;
 
 namespace TestApi.Domain.Entities
 {

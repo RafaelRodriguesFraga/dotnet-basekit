@@ -1,5 +1,5 @@
-﻿using DotnetBoilerplate.Components.Infra.Sql.Context.Base;
-using DotnetBoilerplate.Components.Infra.Sql.Repositories.Base;
+﻿using DotnetBaseKit.Components.Infra.Sql.Context.Base;
+using DotnetBaseKit.Components.Infra.Sql.Repositories.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;

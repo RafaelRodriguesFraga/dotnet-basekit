@@ -16,10 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Api\DotnetBoilerplate.Components.Api.csproj" />
-    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Application\DotnetBoilerplate.Components.Application.csproj" />
-    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Infra.MongoDb\DotnetBoilerplate.Components.Infra.MongoDb.csproj" />
-    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Infra.Sql\DotnetBoilerplate.Components.Infra.Sql.csproj" />
+    <ProjectReference Include="..\..\DotnetBaseKit.Components.Api\DotnetBaseKit.Components.Api.csproj" />
+    <ProjectReference Include="..\..\DotnetBaseKit.Components.Application\DotnetBaseKit.Components.Application.csproj" />
+    <ProjectReference Include="..\..\DotnetBaseKit.Components.Infra.MongoDb\DotnetBaseKit.Components.Infra.MongoDb.csproj" />
+    <ProjectReference Include="..\..\DotnetBaseKit.Components.Infra.Sql\DotnetBaseKit.Components.Infra.Sql.csproj" />
     <ProjectReference Include="..\TestApi.Infra.CrossCutting\TestApi.Infra.CrossCutting.csproj" />
     <ProjectReference Include="..\TestApi.Infra.Sql\TestApi.Infra.Sql.csproj" />
   </ItemGroup>

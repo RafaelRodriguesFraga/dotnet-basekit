@@ -1,6 +1,6 @@
 ﻿
-using DotnetBoilerplate.Components.Application.Base;
-using DotnetBoilerplate.Components.Shared.Notifications;
+using DotnetBaseKit.Components.Application.Base;
+using DotnetBaseKit.Components.Shared.Notifications;
 using TestApi.Application.ViewModels;
 using TestApi.Domain.Repositories;
 

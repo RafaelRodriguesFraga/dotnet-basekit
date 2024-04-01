@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\DotnetBoilerplate.Components.Shared\DotnetBoilerplate.Components.Shared.csproj" />
+    <ProjectReference Include="..\..\DotnetBaseKit.Components.Shared\DotnetBaseKit.Components.Shared.csproj" />
   </ItemGroup>
 
 </Project>
