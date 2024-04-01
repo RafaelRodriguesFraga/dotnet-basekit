@@ -22,14 +22,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DotnetBoilerplate.Components.Shared\DotnetBoilerplate.Components.Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="README.md">
       <PackagePath>\</PackagePath>
       <Pack>True</Pack>
     </None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\DotnetBoilerplate.Components.Shared\DotnetBoilerplate.Components.Shared.csproj" />
   </ItemGroup>
 
 </Project>
