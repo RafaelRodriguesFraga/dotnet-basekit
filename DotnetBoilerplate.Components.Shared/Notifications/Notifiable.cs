@@ -14,7 +14,7 @@ namespace DotnetBoilerplate.Components.Shared.Notifications
         }
 
     
-        protected IReadOnlyCollection<T> Notifications => _notifications;
+        public IReadOnlyCollection<T> Notifications => _notifications;
 
         public void AddNotification(string key, string message)
         {
