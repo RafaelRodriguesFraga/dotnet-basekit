@@ -1,4 +1,5 @@
-﻿using DotnetBoilerplate.Components.Shared.Notifications;
+﻿
+using DotnetBoilerplate.Components.Shared.Notifications;
 
 namespace DotnetBoilerplate.Components.Application.Base
 {
