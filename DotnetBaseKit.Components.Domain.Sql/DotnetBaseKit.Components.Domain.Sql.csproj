@@ -7,7 +7,7 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Authors>Rafael Fraga</Authors>
 		<Company>Rafael Fraga</Company>
-		<Version>2.0.0</Version>
+		<Version>2.1.0</Version>
 		<PackageTags>database, sql, components.domain.sql</PackageTags>
 		<IncludeSymbols>False</IncludeSymbols>
 		<Title>DotnetBaseKit.Components.Domain.Sql</Title>
