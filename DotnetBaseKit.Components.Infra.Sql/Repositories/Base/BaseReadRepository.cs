@@ -33,6 +33,22 @@ namespace DotnetBaseKit.Components.Infra.Sql.Repositories.Base
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
             return await Set.ToListAsync();
-        }            
+        }
+
+        public async Task<(IEnumerable<TEntity> result, int totalRecords)> GetAllPaginatedAsync(
+                int page, int quantityPerPage)
+        {
+            var skip = page == 1 ? 0 : (page - 1) * quantityPerPage;
+
+            var totalRecords = Set.Count();
+
+            var result = await Set
+                     .Skip(skip)
+                     .Take(quantityPerPage)
+                     .OrderByDescending(p => p.CreatedAt)
+                     .ToListAsync();
+
+            return (result, totalRecords);
+        }
     }
 }
