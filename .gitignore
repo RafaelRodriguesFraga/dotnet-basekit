@@ -640,3 +640,7 @@ DotnetBaseKit.Components.Domain.MongoDb/obj/Debug/net6.0/DotnetBaseKit.Component
 DotnetBaseKit.Components.Domain.MongoDb/obj/Debug/net6.0/DotnetBaseKit.Components.Domain.MongoDb.pdb
 DotnetBaseKit.Components.Domain.MongoDb/obj/Debug/net6.0/ref/DotnetBaseKit.Components.Domain.MongoDb.dll
 DotnetBaseKit.Components.Domain.MongoDb/obj/Debug/net6.0/refint/DotnetBaseKit.Components.Domain.MongoDb.dll
+DotnetBaseKit.Components.Domain.Sql/bin/Release/DotnetBaseKit.Components.Domain.Sql.2.1.0.nupkg
+DotnetBaseKit.Components.Domain.Sql/obj/Release/DotnetBaseKit.Components.Domain.Sql.2.1.0.nuspec
+DotnetBaseKit.Components.Infra.Sql/bin/Release/DotnetBaseKit.Components.Infra.Sql.2.1.1.nupkg
+DotnetBaseKit.Components.Infra.Sql/obj/Release/DotnetBaseKit.Components.Infra.Sql.2.1.1.nuspec
