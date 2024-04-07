@@ -8,17 +8,20 @@ namespace TestApi.Infra.Sql.Configurations
     {
         public void Configure(EntityTypeBuilder<TestSql> builder)
         {
-            builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.Id).HasColumnType("varchar(36)");
+            builder.Ignore(entity => entity.Notifications);
+            builder.Ignore(entity => entity.Valid);
+            builder.Ignore(entity => entity.Invalid);
+
+            builder.HasKey(x => x.Id);
 
             builder
                 .Property(t => t.TestString)
                 .IsRequired();
 
-            builder
-                .Property(t => t.CreatedAt)
-                .HasColumnType("datetime");
+           builder.Property(x => x.CreatedAt)
+            .IsRequired()
+            .HasColumnType("timestamp without time zone");
 
             builder.ToTable("TestSql");
         }

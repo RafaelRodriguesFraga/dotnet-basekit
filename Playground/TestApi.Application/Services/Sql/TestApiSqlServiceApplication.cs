@@ -1,7 +1,9 @@
 ﻿
 using DotnetBaseKit.Components.Application.Base;
+using DotnetBaseKit.Components.Application.Pagination;
 using DotnetBaseKit.Components.Shared.Notifications;
 using TestApi.Application.ViewModels;
+using TestApi.Domain.Entities;
 using TestApi.Domain.Repositories;
 
 namespace TestApi.Application.Services
@@ -44,6 +46,12 @@ namespace TestApi.Application.Services
 
             await _testApiSqlWriteRepository.DeleteAsync(test);
 
-        }      
+        }
+
+        public async Task<PaginationResponse<TestSql>> GetAllAsync(int page, int quantityPerPage)
+        {
+            var (result, totalRecords) = await _testApiSqlReadRepository.GetAllPaginatedAsync(page, quantityPerPage);
+            return new PaginationResponse<TestSql>(page, quantityPerPage, totalRecords, result);
+        }
     }
 }

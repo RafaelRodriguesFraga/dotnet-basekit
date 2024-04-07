@@ -11,24 +11,18 @@ namespace TestApi.Infra.Sql.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterDatabase()
-                .Annotation("MySql:CharSet", "utf8mb4");
-
             migrationBuilder.CreateTable(
                 name: "TestSql",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "varchar(36)", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    TestString = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    CreatedAt = table.Column<DateTime>(type: "datetime", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    TestString = table.Column<string>(type: "text", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TestSql", x => x.Id);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
+                });
         }
 
         /// <inheritdoc />

@@ -1,4 +1,5 @@
 ﻿using DotnetBaseKit.Components.Infra.Sql.Context.Base;
+using DotnetBaseKit.Components.Shared.Notifications;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace TestApi.Infra.Sql.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
+             modelBuilder.Ignore<Notification>();
             modelBuilder.ApplyConfiguration(new TestSqlConfiguration());
         }
     }

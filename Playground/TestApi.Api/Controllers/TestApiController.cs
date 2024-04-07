@@ -33,6 +33,14 @@ namespace TestApi.Api.Controllers
             return ResponseCreated();
         }
 
+        [HttpGet("sql/paginated")]
+        public async Task<IActionResult> GetAllPaginatedAsync([FromQuery] int page, [FromQuery] int quantityPerPage)
+        {
+            var result = await _testApiSqlServiceApplication.GetAllAsync(page, quantityPerPage);
+
+            return ResponseOk(result);
+        }
+
         [HttpPut("sql/update/{id}")]
         public async Task<IActionResult> UpdateSqlAsync([FromRoute] Guid id, TestApiViewModel viewModel)
         {

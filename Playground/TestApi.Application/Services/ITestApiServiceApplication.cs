@@ -1,4 +1,5 @@
-﻿using TestApi.Application.ViewModels;
+﻿using DotnetBaseKit.Components.Application.Pagination;
+using TestApi.Application.ViewModels;
 
 namespace TestApi.Application.Services
 {
