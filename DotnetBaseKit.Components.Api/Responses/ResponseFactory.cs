@@ -6,9 +6,13 @@ namespace DotnetBaseKit.Components.Api.Responses
     public class ResponseFactory : IResponseFactory
     {
         private readonly NotificationContext _notificationContext;
-        public ResponseFactory(NotificationContext notificationContext)
+        private readonly INotificationMessageFormatter _messageFormatter;
+        private readonly bool _includeKey;
+        public ResponseFactory(NotificationContext notificationContext, INotificationMessageFormatter messageFormatter, bool includeKey)
         {
             _notificationContext = notificationContext;
+            _messageFormatter = messageFormatter;
+            _includeKey = includeKey;
         }
 
         public Response Create()
@@ -26,18 +30,12 @@ namespace DotnetBaseKit.Components.Api.Responses
             return !_notificationContext.HasNotifications;
         }
 
-        private static List<string> MessageResolver(IReadOnlyCollection<Notification> notifications)
+
+        private List<string> MessageResolver(IReadOnlyCollection<Notification> notifications)
         {
-            var messages = new List<string>();
 
-            foreach (var notify in notifications)
-            {
-                messages.Add($"{notify.Key}: {notify.Message}");
-            }
-
-            return messages;
+            return _messageFormatter.Format(notifications, _includeKey);
         }
-
         public ResponseList<TData> Create<TData>(IEnumerable<TData> dataList) where TData : class
         {
             return new ResponseList<TData>(dataList, ResponseSuccess(), MessageResolver(_notificationContext.Notifications));
