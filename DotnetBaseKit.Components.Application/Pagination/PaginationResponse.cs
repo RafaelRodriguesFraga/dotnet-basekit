@@ -2,6 +2,10 @@
 {
     public class PaginationResponse<TData> : IPaginationResponse<TData> where TData : class
     {
+        public PaginationResponse()
+        {
+
+        }
         public PaginationResponse(int currentPage, int quantityPerPage, long totalRecords, IEnumerable<TData> data)
         {
             CurrentPage = currentPage;
