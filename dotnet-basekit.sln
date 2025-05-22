@@ -43,6 +43,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetBaseKit.Components.In
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApi.Infra.Sql", "Playground\TestApi.Infra.Sql\TestApi.Infra.Sql.csproj", "{9B175C65-5BF2-4DFA-B735-2CEFC55BBF3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetBaseKit.Components.Tests", "DotnetBaseKit.Components.Tests\DotnetBaseKit.Components.Tests.csproj", "{79B61E29-F846-474B-8349-2F428F81A076}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,7 +84,6 @@ Global
 		{3FB76476-3E95-4F1C-A689-0122430660E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FB76476-3E95-4F1C-A689-0122430660E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95419EBC-AEDC-4956-8EF6-23E703966318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95419EBC-AEDC-4956-8EF6-23E703966318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95419EBC-AEDC-4956-8EF6-23E703966318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95419EBC-AEDC-4956-8EF6-23E703966318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95419EBC-AEDC-4956-8EF6-23E703966318}.Release|Any CPU.Build.0 = Release|Any CPU
@@ -106,6 +107,10 @@ Global
 		{9B175C65-5BF2-4DFA-B735-2CEFC55BBF3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B175C65-5BF2-4DFA-B735-2CEFC55BBF3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B175C65-5BF2-4DFA-B735-2CEFC55BBF3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79B61E29-F846-474B-8349-2F428F81A076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B61E29-F846-474B-8349-2F428F81A076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B61E29-F846-474B-8349-2F428F81A076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B61E29-F846-474B-8349-2F428F81A076}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
