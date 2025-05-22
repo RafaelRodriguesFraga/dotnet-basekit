@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace DotnetBaseKit.Components.Shared.Notifications
+﻿namespace DotnetBaseKit.Components.Shared.Notifications
 {
     public abstract class Notifiable<T> where T : Notification
     {
@@ -13,7 +11,12 @@ namespace DotnetBaseKit.Components.Shared.Notifications
             return (T)Activator.CreateInstance(typeof(T), new object[] { key, message });
         }
 
-    
+        private T GetNotificationInstance(string message)
+        {
+            return (T)Activator.CreateInstance(typeof(T), new object[] { message });
+        }
+
+
         public IReadOnlyCollection<T> Notifications => _notifications;
 
         public void AddNotification(string key, string message)
@@ -26,7 +29,13 @@ namespace DotnetBaseKit.Components.Shared.Notifications
         {
             _notifications.Add(notification);
         }
-        
+
+        public void AddNotification(string message)
+        {
+            var notification = GetNotificationInstance(message);
+            _notifications.Add(notification);
+        }
+
         public void AddNotifications(IReadOnlyCollection<T> notifications)
         {
             _notifications.AddRange(notifications);

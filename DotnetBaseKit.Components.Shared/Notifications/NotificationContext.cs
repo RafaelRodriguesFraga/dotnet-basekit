@@ -6,7 +6,6 @@
         public IReadOnlyCollection<Notification> Notifications => _notifications;
         public bool HasNotifications => _notifications.Any();
 
-       
         public NotificationContext()
         {
             _notifications = new List<Notification>();
@@ -17,6 +16,11 @@
             _notifications.Add(new Notification(key, message));
         }
 
+        public void AddNotification(string message)
+        {
+            _notifications.Add(new Notification(message));
+        }
+
         public void AddNotification(Notification notification)
         {
             _notifications.Add(notification);
@@ -25,11 +29,12 @@
         public void AddNotifications(IReadOnlyCollection<Notification> notifications)
         {
             _notifications.AddRange(notifications);
-        } 
+        }
+
         public void AddNotifications(List<Notification> notifications)
         {
             _notifications.AddRange(notifications);
         }
-
     }
+
 }

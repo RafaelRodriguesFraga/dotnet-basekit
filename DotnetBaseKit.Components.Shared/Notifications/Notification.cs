@@ -2,17 +2,19 @@
 {
     public class Notification
     {
-        public Notification()
-        {
 
-        }
-        public Notification(string key, string message)
+        public Notification(string? key, string message)
         {
             Key = key;
             Message = message;
         }
 
-        public string Key { get; set; }
+        public Notification(string message) : this(null, message)
+        {
+        }
+
+
+        public string? Key { get; set; }
         public string Message { get; set; }
     }
 }
