@@ -4,6 +4,8 @@ using DotnetBaseKit.Components.Infra.MongoDb.Repositories.Base;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -11,7 +13,7 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IServiceCollection AddMongoDb(this IServiceCollection services, IConfiguration configuration)
         {
-            BsonDefaults.GuidRepresentation = GuidRepresentation.Standard;
+            BsonSerializer.RegisterSerializer(new GuidSerializer(GuidRepresentation.Standard));
             services.Configure<MongoSettings>(configuration.GetSection("MongoSettings"));
             services.AddSingleton<IMongoSettings>(serviceProvider => serviceProvider.GetRequiredService<IOptions<MongoSettings>>().Value);
            
