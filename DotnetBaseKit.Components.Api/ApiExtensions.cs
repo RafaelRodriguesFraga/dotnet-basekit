@@ -19,5 +19,5 @@ namespace DotnetBaseKit.Components.Api
 
             return services;
         }
-    }
+    }   
 }

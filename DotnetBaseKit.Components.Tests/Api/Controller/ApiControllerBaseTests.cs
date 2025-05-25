@@ -4,7 +4,7 @@ using DotnetBaseKit.Components.Api.Base;
 using DotnetBaseKit.Components.Api.Responses;
 using DotnetBaseKit.Components.Application.Pagination;
 
-namespace DotnetBaseKit.Tests.Api.Controller
+namespace DotnetBaseKit.Components.Tests.Api.Controller
 {
     public class ApiControllerBaseTests
     {
@@ -17,11 +17,25 @@ namespace DotnetBaseKit.Tests.Api.Controller
             public IActionResult CallResponseOk<TData>(TData data) where TData : class => ResponseOk(data);
             public IActionResult CallResponseOkList<TData>(IEnumerable<TData> data) where TData : class => ResponseOk(data);
             public IActionResult CallResponsePaginated<TData>(PaginationResponse<TData> data) where TData : class => ResponseOk(data);
-            public IActionResult CallResponseCreatedEmpty() => ResponseCreated();
+            public IActionResult CallResponseCreated() => ResponseCreated();
             public IActionResult CallResponseBadRequest<TData>(TData data) where TData : class => ResponseBadRequest(data);
             public IActionResult CallResponseUnprocessableEntity<TData>(TData data) where TData : class => base.ResponseUnprocessableEntity(data);
             public IActionResult CallResponseConflict<TData>(TData data) where TData : class => base.ResponseConflict(data);
 
+        }
+        
+        [Fact(DisplayName = "Should return Created when ResponseCreated is successful")]
+        public void Should_Return_Created_When_ResponseCreated_No_Data_Is_Successful()
+        {
+            var mockFactory = new Mock<IResponseFactory>();
+            mockFactory.Setup(f => f.Create())
+                .Returns(new Response(true, new List<string>()));
+
+            var controller = new TestController(mockFactory.Object);
+
+            var result = controller.CallResponseCreated();
+
+            Assert.IsType<CreatedResult>(result);   
         }
 
         [Fact(DisplayName = "Should return Ok when CreateResponse is successful")]
@@ -172,6 +186,36 @@ namespace DotnetBaseKit.Tests.Api.Controller
             var result = controller.CallResponseConflict(data);
 
             Assert.IsType<ConflictObjectResult>(result);
+        }
+        
+        [Fact(DisplayName = "Should return BadRequest when data is not successful")]
+        public void Should_Return_BadRequest_When_Data_Is_Not_Successful()
+        {
+            var data = new DummyDto { Id = 1, Name = "Bad Request" };
+            var mockFactory = new Mock<IResponseFactory>();
+            mockFactory.Setup(f => f.Create(data))
+                .Returns(new Response<DummyDto>(data, false, new List<string> { "Error" }));
+
+            var controller = new TestController(mockFactory.Object);
+
+            var result = controller.CallResponseBadRequest(data);
+
+            Assert.IsType<BadRequestObjectResult>(result);
+        }
+
+        [Fact(DisplayName = "Should return null when ResponseBadRequest is null")]
+        public void Should_Return_Null_When_ResponseBadRequest_Is_Null()
+        {
+            var data = new DummyDto { Id = 2, Name = "Good Request" };
+            var mockFactory = new Mock<IResponseFactory>();
+            mockFactory.Setup(f => f.Create(data))
+                .Returns(new Response<DummyDto>(data, true, new List<string>()));
+
+            var controller = new TestController(mockFactory.Object);
+
+            var result = controller.CallResponseBadRequest(data);
+
+            Assert.Null(result);
         }
     }
 

@@ -15,6 +15,8 @@
     <PackageReference Include="Moq" Version="4.20.72" />
     <PackageReference Include="xunit" Version="2.5.3" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +26,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DotnetBaseKit.Components.Api\DotnetBaseKit.Components.Api.csproj" />
     <ProjectReference Include="..\DotnetBaseKit.Components.Shared\DotnetBaseKit.Components.Shared.csproj" />
+    <ProjectReference Include="..\DotnetBaseKit.Components.Application\DotnetBaseKit.Components.Application.csproj" />
   </ItemGroup>
-
+  
 </Project>

@@ -12,12 +12,14 @@ public class BaseServiceApplicationTests
 
         var service = new BaseServiceApplication(notificationContext);
 
-        Assert.NotNull(service);
         // Usando reflection para acessar protected _notificationContext
         var field = typeof(BaseServiceApplication)
-            .GetField("_notificationContext", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            .GetField("_notificationContext",
+                System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+
         var contextValue = field.GetValue(service);
 
+        Assert.NotNull(service);
         Assert.NotNull(contextValue);
         Assert.IsType<NotificationContext>(contextValue);
     }
