@@ -45,6 +45,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApi.Infra.Sql", "Playgr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetBaseKit.Components.Tests", "DotnetBaseKit.Components.Tests\DotnetBaseKit.Components.Tests.csproj", "{79B61E29-F846-474B-8349-2F428F81A076}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Tests", "6 - Tests", "{4975B77C-8DE4-4A30-BD6E-3EA9AC617E97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -130,6 +132,7 @@ Global
 		{6E522D4F-54B2-4DE0-A5BE-8E2D7A6EE8DC} = {A9D20822-8CB9-40D2-83B7-BBE591313C54}
 		{E28B7BA3-309E-4DD8-BC74-F6D08C03A6CA} = {844B65D6-17E3-4996-983C-AC6BB4A0ACEA}
 		{9B175C65-5BF2-4DFA-B735-2CEFC55BBF3C} = {A9D20822-8CB9-40D2-83B7-BBE591313C54}
+		{79B61E29-F846-474B-8349-2F428F81A076} = {4975B77C-8DE4-4A30-BD6E-3EA9AC617E97}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC93B711-2868-4A48-9DD1-32201683CBC7}
