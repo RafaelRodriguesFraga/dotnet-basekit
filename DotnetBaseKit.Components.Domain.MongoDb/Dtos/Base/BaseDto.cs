@@ -1,5 +1,4 @@
-﻿using FluentValidation.Results;
-using DotnetBaseKit.Components.Shared.Notifications;
+﻿using DotnetBaseKit.Components.Shared.Notifications;
 
 namespace DotnetBaseKit.Components.Domain.MongoDb.Dtos.Base
 {
@@ -7,17 +6,5 @@ namespace DotnetBaseKit.Components.Domain.MongoDb.Dtos.Base
     {
         public abstract void Validate();
 
-        public void AddNotifications(ValidationResult validationResult)
-        {
-            var invalidValidation = !validationResult.IsValid;
-            if (invalidValidation)
-            {
-                foreach (var failure in validationResult.Errors)
-                {
-                    AddNotification(failure.PropertyName, failure.ErrorMessage);
-                }
-            }
-
-        }
     }
 }
