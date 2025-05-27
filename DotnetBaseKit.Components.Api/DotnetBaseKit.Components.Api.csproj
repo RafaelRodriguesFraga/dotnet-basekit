@@ -15,6 +15,13 @@
 	<PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
+  <PackageReleaseNotes>
+    - Support for net8.0
+    - Added ResponseConflict and ResponseUnprocessableEntity methods
+    - Injected INotificationMessageFormatter into ResponseFactory and ApiExtensions
+    - Updated Microsoft.AspNetCore.Mvc to 2.3.0
+    - Refactored MessageResolver in ResponseFactory
+  </PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,6 +38,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+    <None Include="CHANGELOG.md">
+    <Pack>True</Pack>
+    <PackagePath>\</PackagePath>
+  </None>
   </ItemGroup>
 
 </Project>
