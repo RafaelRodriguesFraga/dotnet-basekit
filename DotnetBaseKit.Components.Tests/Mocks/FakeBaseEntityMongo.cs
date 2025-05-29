@@ -3,7 +3,7 @@ using DotnetBaseKit.Components.Domain.MongoDb.Entities.Base;
 
 namespace DotnetBaseKit.Components.Tests.Mocks
 {
-    public class FakeBaseEntity : BaseEntity
+    public class FakeBaseEntityMongo : BaseEntity
     {
         public override void Validate()
         {
@@ -11,18 +11,18 @@ namespace DotnetBaseKit.Components.Tests.Mocks
         }
     }
 
-    public class FakeBaseEntityWithData : BaseEntity
+    public class FakeBaseEntityMongoWithData : BaseEntity
     {
 
         public string Name { get; private set; }
 
-        public FakeBaseEntityWithData(string name)
+        public FakeBaseEntityMongoWithData(string name)
         {
             Name = name;
         }
         public override void Validate()
         {
-            var validator = new FakeValidator();
+            var validator = new FakeValidatorMongo();
             var result = validator.Validate(this);
 
             this.AddNotifications(result);

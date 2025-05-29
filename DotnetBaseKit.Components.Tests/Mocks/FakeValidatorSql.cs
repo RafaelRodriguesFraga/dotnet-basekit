@@ -2,9 +2,9 @@ using FluentValidation;
 
 namespace DotnetBaseKit.Components.Tests.Mocks
 {
-    public class FakeValidator : AbstractValidator<FakeBaseEntityWithData>
+    public class FakeValidatorSql : AbstractValidator<FakeBaseEntitySqlWithData>
     {
-        public FakeValidator()
+        public FakeValidatorSql()
         {
             RuleFor(x => x.Name)
                 .NotEmpty().WithMessage("Name is required");
