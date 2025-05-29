@@ -9,7 +9,7 @@ namespace DotnetBaseKit.Components.Tests.Unit.Domain.MongoDb.Entity
         [Fact(DisplayName = "Should initialize Id and CreatedAt on constructor")]
         public void Should_Initialize_Id_And_CreatedAt_On_Constructor()
         {
-            var entity = new FakeBaseEntity();
+            var entity = new FakeBaseEntityMongo();
 
             Assert.NotEqual(Guid.Empty, entity.Id);
             Assert.True(entity.CreatedAt <= DateTime.Now);
@@ -18,7 +18,7 @@ namespace DotnetBaseKit.Components.Tests.Unit.Domain.MongoDb.Entity
         [Fact(DisplayName = "Should add notifications from ValidationResult")]
         public void Should_Add_Notifications_From_ValidationResult()
         {
-            var entity = new FakeBaseEntity();
+            var entity = new FakeBaseEntityMongo();
             var validationResult = new ValidationResult(new List<ValidationFailure>
             {
                 new ValidationFailure("Name", "Name is required"),
@@ -36,7 +36,7 @@ namespace DotnetBaseKit.Components.Tests.Unit.Domain.MongoDb.Entity
         [Fact(DisplayName = "Validate should add notification when name is empty")]
         public void Validate_Should_AddNotification_When_Name_Is_Empty()
         {
-            var entity = new FakeBaseEntityWithData("");
+            var entity = new FakeBaseEntityMongoWithData("");
             entity.Validate();
 
             var notifications = entity.Notifications;
@@ -49,7 +49,7 @@ namespace DotnetBaseKit.Components.Tests.Unit.Domain.MongoDb.Entity
         [Fact(DisplayName = "Validate should not add notification when name is valid")]
         public void Validate_Should_NotAddNotification_When_NameIsValid()
         {
-            var entity = new FakeBaseEntityWithData("Rafael");
+            var entity = new FakeBaseEntityMongoWithData("Rafael");
             entity.Validate();
 
             var notifications = entity.Notifications;

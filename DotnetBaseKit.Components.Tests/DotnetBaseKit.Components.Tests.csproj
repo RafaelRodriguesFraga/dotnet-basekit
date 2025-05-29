@@ -28,6 +28,7 @@
     <ProjectReference Include="..\DotnetBaseKit.Components.Shared\DotnetBaseKit.Components.Shared.csproj" />
     <ProjectReference Include="..\DotnetBaseKit.Components.Application\DotnetBaseKit.Components.Application.csproj" />
     <ProjectReference Include="..\DotnetBaseKit.Components.Domain.MongoDb\DotnetBaseKit.Components.Domain.MongoDb.csproj" />
+    <ProjectReference Include="..\DotnetBaseKit.Components.Domain.Sql\DotnetBaseKit.Components.Domain.Sql.csproj" />
   </ItemGroup>
   
 </Project>
