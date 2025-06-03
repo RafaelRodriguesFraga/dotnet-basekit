@@ -8,11 +8,11 @@ namespace DotnetBaseKit.Components.Infra.MongoDb.Repositories.Base
 {
     public class BaseReadRepository<TEntity> : IBaseReadRepository<TEntity> where TEntity : class, IBaseEntity
     {
-        protected readonly IMongoCollection<TEntity> _collection;
-        public BaseReadRepository(IMongoSettings settings)
+        private readonly IMongoCollection<TEntity> _collection;
+        
+        public BaseReadRepository(IMongoClient client, IMongoSettings settings)
         {
-            var database = new MongoClient(settings.ConnectionString).GetDatabase(settings.DatabaseName);
-
+            var database = client.GetDatabase(settings.DatabaseName);
             _collection = database.GetCollection<TEntity>(typeof(TEntity).Name);
         }
 
@@ -25,7 +25,7 @@ namespace DotnetBaseKit.Components.Infra.MongoDb.Repositories.Base
         {
             var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, id);
 
-            return _collection.Find(filter).SingleOrDefault();
+            return _collection.Find(filter).FirstOrDefault();
 
         }
 
@@ -33,7 +33,7 @@ namespace DotnetBaseKit.Components.Infra.MongoDb.Repositories.Base
         {
             var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, id);
 
-            return await _collection.Find(filter).SingleOrDefaultAsync();
+            return await _collection.Find(filter).FirstOrDefaultAsync();
 
         }
 

@@ -9,12 +9,12 @@ namespace DotnetBaseKit.Components.Infra.MongoDb.Repositories.Base
     public class BaseWriteRepository<TEntity> : IBaseWriteRepository<TEntity> where TEntity : IBaseEntity
     {
         private readonly IMongoCollection<TEntity> _collection;
-        public BaseWriteRepository(IMongoSettings settings)
+        public BaseWriteRepository(IMongoClient client, IMongoSettings settings)
         {
-            var database = new MongoClient(settings.ConnectionString).GetDatabase(settings.DatabaseName);
-
+            var database = client.GetDatabase(settings.DatabaseName);
             _collection = database.GetCollection<TEntity>(typeof(TEntity).Name);
         }
+        
         public void InsertOne(TEntity entity)
         {
             _collection.InsertOne(entity);
