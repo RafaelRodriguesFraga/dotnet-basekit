@@ -5,6 +5,11 @@ namespace DotnetBaseKit.Components.Tests.Mocks
 {
     public class FakeBaseEntityMongo : BaseEntity
     {
+        public FakeBaseEntityMongo(Guid id, DateTime createdAt)
+            : base(id, createdAt)
+        {
+        }
+
         public override void Validate()
         {
 
