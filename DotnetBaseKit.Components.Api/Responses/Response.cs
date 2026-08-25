@@ -21,7 +21,7 @@ namespace DotnetBaseKit.Components.Api.Responses
         }            
 
         public bool Success { get;  set; }
-        public IEnumerable<string> Errors { get; set; }
+        public IEnumerable<string> Errors { get; set; } = Array.Empty<string>();
 
     }
 
@@ -46,7 +46,7 @@ namespace DotnetBaseKit.Components.Api.Responses
             Errors = errors;
         }
 
-        public TData Data { get; set; }
+        public TData? Data { get; set; }
 
     }
 
@@ -77,7 +77,7 @@ namespace DotnetBaseKit.Components.Api.Responses
             Errors = errors;
         }
 
-        public IEnumerable<TData> Data { get; set; }
+        public IEnumerable<TData> Data { get; set; } = Array.Empty<TData>();
     }
 
     public class ResponsePaginated<TData> : ResponseList<TData>
