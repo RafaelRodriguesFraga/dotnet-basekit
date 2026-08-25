@@ -6,7 +6,7 @@
         public Notification(string? key, string message)
         {
             Key = key;
-            Message = message;
+            Message = message ?? throw new ArgumentNullException(nameof(message));
         }
 
         public Notification(string message) : this(null, message)
@@ -15,6 +15,6 @@
 
 
         public string? Key { get; set; }
-        public string Message { get; set; }
+        public string Message { get; set; } = string.Empty;
     }
 }
