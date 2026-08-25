@@ -11,32 +11,34 @@ namespace DotnetBaseKit.Components.Infra.Sql
     {
         public static IServiceCollection AddDbContext<TContext>(this IServiceCollection services, IConfiguration configuration) where TContext : BaseContext
         {
-            var selectedDatabase = configuration.GetSection("SelectedDatabase").Value;
-            string connectionString = "";
+            ArgumentNullException.ThrowIfNull(services);
+            ArgumentNullException.ThrowIfNull(configuration);
+
+            var selectedDatabase = configuration["SelectedDatabase"];
 
             switch (selectedDatabase)
             {
                 case "MySql":
-                    connectionString = configuration.GetConnectionString("MysqlConnection");
+                    var connectionString = GetRequiredConnectionString(configuration, "MysqlConnection");
                     var serverVersion = ServerVersion.AutoDetect(connectionString);
 
                     services.AddDbContext<TContext>(options => options.UseMySql(connectionString, serverVersion, optionsBuilder => optionsBuilder.MigrationsAssembly(typeof(TContext).Assembly.FullName)));
                     break;
 
                 case "SqlServer":
-                    connectionString = configuration.GetConnectionString("SqlServerConnection");
+                    connectionString = GetRequiredConnectionString(configuration, "SqlServerConnection");
 
                     services.AddDbContext<TContext>(options => options.UseSqlServer(connectionString, optionsBuilder => optionsBuilder.MigrationsAssembly(typeof(TContext).Assembly.FullName)));
                     break;
 
                 case "Postgres":
-                    connectionString = configuration.GetConnectionString("PostgresConnection");
+                    connectionString = GetRequiredConnectionString(configuration, "PostgresConnection");
 
                     services.AddDbContext<TContext>(options => options.UseNpgsql(connectionString, optionsBuilder => optionsBuilder.MigrationsAssembly(typeof(TContext).Assembly.FullName)));
                     break;
 
                 default:
-                    throw new NotSupportedException("Selected database is not supported.");
+                    throw new NotSupportedException($"Selected database '{selectedDatabase ?? "(not configured)"}' is not supported.");
             }
 
             AddSqlRepository(services);
@@ -48,10 +50,17 @@ namespace DotnetBaseKit.Components.Infra.Sql
 
         public static IServiceCollection AddSqlRepository(IServiceCollection services)
         {
+            ArgumentNullException.ThrowIfNull(services);
             services.AddScoped(typeof(IBaseWriteRepository<>), typeof(BaseWriteRepository<>));
             services.AddScoped(typeof(IBaseReadRepository<>), typeof(BaseReadRepository<>));
 
             return services;
+        }
+
+        private static string GetRequiredConnectionString(IConfiguration configuration, string name)
+        {
+            return configuration.GetConnectionString(name)
+                ?? throw new InvalidOperationException($"Connection string '{name}' is not configured.");
         }
     }
 }
