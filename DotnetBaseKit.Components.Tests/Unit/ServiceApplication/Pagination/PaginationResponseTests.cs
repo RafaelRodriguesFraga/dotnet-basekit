@@ -10,7 +10,8 @@ public class PaginationResponseTests
         var pagination = new PaginationResponse<string>();
 
         Assert.NotNull(pagination);
-        Assert.Null(pagination.Data);
+        Assert.NotNull(pagination.Data);
+        Assert.Empty(pagination.Data);
         Assert.Equal(0, pagination.CurrentPage);
         Assert.Equal(0, pagination.QuantityPerPage);
         Assert.Equal(0, pagination.TotalPages);
