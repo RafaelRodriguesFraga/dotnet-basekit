@@ -15,12 +15,30 @@ namespace DotnetBaseKit.Components.Infra.MongoDb
     {
         public static IServiceCollection AddMongoDb(this IServiceCollection services, IConfiguration configuration)
         {
-            BsonSerializer.RegisterSerializer(new GuidSerializer(GuidRepresentation.Standard));
+            ArgumentNullException.ThrowIfNull(services);
+            ArgumentNullException.ThrowIfNull(configuration);
+
+            BsonSerializer.TryRegisterSerializer(new GuidSerializer(GuidRepresentation.Standard));
             services.Configure<MongoSettings>(configuration.GetSection("MongoSettings"));
-            services.AddSingleton<IMongoSettings>(serviceProvider => serviceProvider.GetRequiredService<IOptions<MongoSettings>>().Value);
+            services.AddSingleton<IMongoSettings>(serviceProvider =>
+            {
+                var settings = serviceProvider.GetRequiredService<IOptions<MongoSettings>>().Value;
+                ValidateSettings(settings);
+                return settings;
+            });
             services.AddSingleton<IMongoClient>(sp => new MongoClient(sp.GetRequiredService<IMongoSettings>().ConnectionString));
+            services.AddScoped<DbSession>();
             AddRepositories(services);
             return services;
+        }
+
+        private static void ValidateSettings(IMongoSettings settings)
+        {
+            if (string.IsNullOrWhiteSpace(settings.ConnectionString))
+                throw new InvalidOperationException("MongoSettings:ConnectionString must be configured.");
+
+            if (string.IsNullOrWhiteSpace(settings.DatabaseName))
+                throw new InvalidOperationException("MongoSettings:DatabaseName must be configured.");
         }
 
         private static IServiceCollection AddRepositories(IServiceCollection services) {
