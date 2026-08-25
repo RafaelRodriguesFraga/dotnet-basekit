@@ -14,6 +14,31 @@ namespace DotnetBaseKit.Components.Tests.Unit.Infra.MongoDb.Repositories
         private Mock<IMongoCollection<FakeBaseEntityMongo>> _mockCollection;
         private Mock<IMongoSettings> _mockSettings;
 
+        private static void SetupFind(
+            Mock<IMongoCollection<FakeBaseEntityMongo>> collection,
+            IEnumerable<FakeBaseEntityMongo> entities)
+        {
+            var cursor = new Mock<IAsyncCursor<FakeBaseEntityMongo>>();
+            cursor.SetupGet(c => c.Current).Returns(entities);
+            cursor.SetupSequence(c => c.MoveNext(It.IsAny<CancellationToken>()))
+                .Returns(true)
+                .Returns(false);
+            cursor.SetupSequence(c => c.MoveNextAsync(It.IsAny<CancellationToken>()))
+                .ReturnsAsync(true)
+                .ReturnsAsync(false);
+
+            collection.Setup(c => c.FindSync<FakeBaseEntityMongo>(
+                    It.IsAny<FilterDefinition<FakeBaseEntityMongo>>(),
+                    It.IsAny<FindOptions<FakeBaseEntityMongo, FakeBaseEntityMongo>>(),
+                    It.IsAny<CancellationToken>()))
+                .Returns(cursor.Object);
+            collection.Setup(c => c.FindAsync<FakeBaseEntityMongo>(
+                    It.IsAny<FilterDefinition<FakeBaseEntityMongo>>(),
+                    It.IsAny<FindOptions<FakeBaseEntityMongo, FakeBaseEntityMongo>>(),
+                    It.IsAny<CancellationToken>()))
+                .ReturnsAsync(cursor.Object);
+        }
+
         private BaseReadRepository<FakeBaseEntityMongo> CreateRepository()
         {
             _mockMongoClient = new Mock<IMongoClient>();
@@ -36,17 +61,8 @@ namespace DotnetBaseKit.Components.Tests.Unit.Infra.MongoDb.Repositories
             var fakeCreatedAt = DateTime.Now;
             var expectedEntity = new FakeBaseEntityMongo(fakeId, fakeCreatedAt);
 
-            var mockFindFluent = new Mock<IFindFluent<FakeBaseEntityMongo, FakeBaseEntityMongo>>();
-
-            mockFindFluent.Setup(f => f.FirstOrDefault(It.IsAny<CancellationToken>())).Returns(expectedEntity);
-
             var mockCollection = new Mock<IMongoCollection<FakeBaseEntityMongo>>();
-            mockCollection
-                .Setup(c => c.Find(
-                    It.IsAny<FilterDefinition<FakeBaseEntityMongo>>(), 
-                    It.IsAny<FindOptions<FakeBaseEntityMongo, FakeBaseEntityMongo>>()
-                ))
-                .Returns(mockFindFluent.Object);
+            SetupFind(mockCollection, [expectedEntity]);
 
             var mockDatabase = new Mock<IMongoDatabase>();
             mockDatabase.Setup(db => db.GetCollection<FakeBaseEntityMongo>(It.IsAny<string>(), null))
@@ -75,11 +91,7 @@ namespace DotnetBaseKit.Components.Tests.Unit.Infra.MongoDb.Repositories
             var fakeCreatedAt = DateTime.Now;
             var expectedEntity = new FakeBaseEntityMongo(fakeId, fakeCreatedAt);
 
-            var mockFindFluent = new Mock<IFindFluent<FakeBaseEntityMongo, FakeBaseEntityMongo>>();
-            mockFindFluent.Setup(f => f.SingleOrDefaultAsync(It.IsAny<CancellationToken>()))
-                .ReturnsAsync(expectedEntity);
-            _mockCollection.Setup(c => c.Find(It.IsAny<FilterDefinition<FakeBaseEntityMongo>>(), null))
-                .Returns(mockFindFluent.Object);
+            SetupFind(_mockCollection, [expectedEntity]);
 
             var result = await repo.FindByIdAsync(fakeId);
 
@@ -96,10 +108,7 @@ namespace DotnetBaseKit.Components.Tests.Unit.Infra.MongoDb.Repositories
             var expectedEntity = new FakeBaseEntityMongo(fakeId, fakeCreatedAt);
             Expression<Func<FakeBaseEntityMongo, bool>> filter = x => x.Id == expectedEntity.Id;
 
-            var mockFindFluent = new Mock<IFindFluent<FakeBaseEntityMongo, FakeBaseEntityMongo>>();
-            mockFindFluent.Setup(f => f.FirstOrDefault(It.IsAny<CancellationToken>())).Returns(expectedEntity);
-            _mockCollection.Setup(c => c.Find(filter, null))
-                .Returns(mockFindFluent.Object);
+            SetupFind(_mockCollection, [expectedEntity]);
 
             var result = repo.FindOne(filter);
 
@@ -117,11 +126,7 @@ namespace DotnetBaseKit.Components.Tests.Unit.Infra.MongoDb.Repositories
 
             Expression<Func<FakeBaseEntityMongo, bool>> filter = x => x.Id == expectedEntity.Id;
 
-            var mockFindFluent = new Mock<IFindFluent<FakeBaseEntityMongo, FakeBaseEntityMongo>>();
-            mockFindFluent.Setup(f => f.FirstOrDefaultAsync(It.IsAny<CancellationToken>()))
-                .ReturnsAsync(expectedEntity);
-            _mockCollection.Setup(c => c.Find(filter, null))
-                .Returns(mockFindFluent.Object);
+            SetupFind(_mockCollection, [expectedEntity]);
 
             var result = await repo.FindOneAsync(filter);
 
@@ -141,10 +146,7 @@ namespace DotnetBaseKit.Components.Tests.Unit.Infra.MongoDb.Repositories
                 new FakeBaseEntityMongo(fakeId, fakeCreatedAt)
             };
 
-            var mockFindFluent = new Mock<IFindFluent<FakeBaseEntityMongo, FakeBaseEntityMongo>>();
-            mockFindFluent.Setup(f => f.ToListAsync(It.IsAny<CancellationToken>())).ReturnsAsync(expectedList);
-            _mockCollection.Setup(c => c.Find(It.IsAny<FilterDefinition<FakeBaseEntityMongo>>(), null))
-                .Returns(mockFindFluent.Object);
+            SetupFind(_mockCollection, expectedList);
 
             var result = await repo.FindAllAsync();
 
@@ -164,10 +166,7 @@ namespace DotnetBaseKit.Components.Tests.Unit.Infra.MongoDb.Repositories
                 new FakeBaseEntityMongo(fakeId, fakeCreatedAt)
             };
 
-            var mockFindFluent = new Mock<IFindFluent<FakeBaseEntityMongo, FakeBaseEntityMongo>>();
-            mockFindFluent.Setup(f => f.ToList(It.IsAny<CancellationToken>())).Returns(expectedList);
-            _mockCollection.Setup(c => c.Find(It.IsAny<FilterDefinition<FakeBaseEntityMongo>>(), null))
-                .Returns(mockFindFluent.Object);
+            SetupFind(_mockCollection, expectedList);
 
             var result = repo.FindAll();
 
