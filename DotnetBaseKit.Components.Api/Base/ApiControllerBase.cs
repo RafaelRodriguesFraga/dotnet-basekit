@@ -11,7 +11,7 @@ namespace DotnetBaseKit.Components.Api.Base
 
         protected ApiControllerBase(IResponseFactory responseFactory)
         {
-            _responseFactory = responseFactory;
+            _responseFactory = responseFactory ?? throw new ArgumentNullException(nameof(responseFactory));
         }
 
 
@@ -62,15 +62,10 @@ namespace DotnetBaseKit.Components.Api.Base
             return BuildResponse(response, r => Created(string.Empty, r));
         }
 
-            // BadRequest genérico (ainda que o retorno null não seja muito usual, pode ser ajustado)
         protected IActionResult ResponseBadRequest<TData>(TData result) where TData : class
         {
             var response = _responseFactory.Create(result);
-
-            if (!response.Success)
-                return BadRequest(response);
-
-            return null;
+            return BadRequest(response);
         }
 
         protected IActionResult ResponseConflict<TData>(TData result) where TData : class
