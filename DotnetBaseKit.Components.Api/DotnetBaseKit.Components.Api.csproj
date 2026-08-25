@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Rafael Fraga</Authors>
     <Company>Rafael Fraga</Company>
-	<Version>4.0.1</Version>
+	<Version>5.0.0</Version>
 	<PackageTags>api, ddd, components, components.api</PackageTags>
 	<IncludeSymbols>False</IncludeSymbols>
 	<Title>DotnetBaseKit.Components.Api</Title>
@@ -16,16 +16,17 @@
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
   <PackageReleaseNotes>
+    - 5.0.0: ResponseBadRequest now always returns an explicit BadRequest result
     - Support for net8.0
     - Added ResponseConflict and ResponseUnprocessableEntity methods
     - Injected INotificationMessageFormatter into ResponseFactory and ApiExtensions
-    - Updated Microsoft.AspNetCore.Mvc to 2.3.0
+    - Uses the ASP.NET Core shared framework on .NET 8
     - Refactored MessageResolver in ResponseFactory
   </PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.3.0" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>

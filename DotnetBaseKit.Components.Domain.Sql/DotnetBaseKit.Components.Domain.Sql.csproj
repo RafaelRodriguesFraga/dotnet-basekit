@@ -7,7 +7,7 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Authors>Rafael Fraga</Authors>
 		<Company>Rafael Fraga</Company>
-		<Version>3.1.0</Version>
+		<Version>3.1.1</Version>
 		<PackageTags>database, sql, components.domain.sql</PackageTags>
 		<IncludeSymbols>False</IncludeSymbols>
 		<Title>DotnetBaseKit.Components.Domain.Sql</Title>
@@ -15,10 +15,15 @@
 		<PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReleaseNotes>
+			- 3.1.1: Adds package release notes
+			- Uses centralized package version management
+			- Support for net8.0
+		</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="FluentValidation" Version="12.0.0" />
+        <PackageReference Include="FluentValidation" />
 	</ItemGroup>
 
 	<ItemGroup>

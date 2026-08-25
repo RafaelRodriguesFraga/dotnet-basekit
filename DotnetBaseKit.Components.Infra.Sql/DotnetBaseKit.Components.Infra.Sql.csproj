@@ -7,7 +7,7 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Authors>Rafael Fraga</Authors>
 		<Company>Rafael Fraga</Company>
-		<Version>3.1.1</Version>
+		<Version>3.1.2</Version>
 		<PackageTags>infra, sql, components.infra.sql</PackageTags>
 		<IncludeSymbols>False</IncludeSymbols>
 		<Title>DotnetBaseKit.Components.Infra.Sql</Title>
@@ -15,14 +15,20 @@
 		<PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReleaseNotes>
+			- 3.1.2: Validates selected database and connection strings at startup
+			- Improves configuration error messages for database providers
+			- Uses centralized package version management
+			- Support for net8.0
+		</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.16" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.16" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
-		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
-		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.3" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" />
 	</ItemGroup>
 
 	<ItemGroup>

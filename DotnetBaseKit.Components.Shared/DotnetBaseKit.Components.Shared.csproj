@@ -7,7 +7,7 @@
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <Authors>Rafael Fraga</Authors>
 	  <Company>Rafael Fraga</Company>
-	  <Version>4.1.0</Version>
+	  <Version>4.1.1</Version>
 	  <PackageTags>shared, ddd, components, components.shared</PackageTags>
 	  <IncludeSymbols>False</IncludeSymbols>
 	  <Title>DotnetBaseKit.Components.Shared</Title>
@@ -15,6 +15,11 @@
 	  <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
 	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <PackageReleaseNotes>
+	    - 4.1.1: Improves notification nullability and guard clauses
+	    - Makes notification creation safer for derived types
+	    - Support for net8.0
+	  </PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
