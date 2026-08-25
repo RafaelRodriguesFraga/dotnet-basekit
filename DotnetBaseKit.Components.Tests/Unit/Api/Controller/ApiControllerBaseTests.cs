@@ -203,8 +203,8 @@ namespace DotnetBaseKit.Components.Tests.Api.Controller
             Assert.IsType<BadRequestObjectResult>(result);
         }
 
-        [Fact(DisplayName = "Should return null when ResponseBadRequest is null")]
-        public void Should_Return_Null_When_ResponseBadRequest_Is_Null()
+        [Fact(DisplayName = "Should return BadRequest when ResponseBadRequest is successful")]
+        public void Should_Return_BadRequest_When_ResponseBadRequest_Is_Successful()
         {
             var data = new DummyDto { Id = 2, Name = "Good Request" };
             var mockFactory = new Mock<IResponseFactory>();
@@ -215,7 +215,7 @@ namespace DotnetBaseKit.Components.Tests.Api.Controller
 
             var result = controller.CallResponseBadRequest(data);
 
-            Assert.Null(result);
+            Assert.IsType<BadRequestObjectResult>(result);
         }
     }
 
