@@ -1,0 +1,21 @@
+name: Master Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Show release information
+        run: |
+          echo "Current branch: ${{ github.ref_name }}"
+          echo "Latest commit: ${{ github.sha }}"
