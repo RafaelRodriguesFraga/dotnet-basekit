@@ -26,6 +26,25 @@ jobs:
 
           echo "Latest tag: $LATEST_TAG"
           echo "latest=$LATEST_TAG" >> "$GITHUB_OUTPUT"
+        
+      - name: Analyze release
+        id: analyze
+        run: |
+          LATEST_TAG="${{ steps.tag.outputs.latest }}"
+
+          TYPE=$(./scripts/analyze-commits.sh "$LATEST_TAG")
+
+          echo "type=$TYPE" >> "$GITHUB_OUTPUT"
+
+      - name: Calculate next version
+        id: version
+        run: |
+          LATEST_TAG="${{ steps.tag.outputs.latest }}"
+          TYPE="${{ steps.analyze.outputs.type }}"
+
+          NEXT_VERSION=$(./scripts/release.sh "$LATEST_TAG" "$TYPE")
+
+          echo "next=$NEXT_VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Get commits since latest tag
         run: |
@@ -43,3 +62,6 @@ jobs:
         run: |
           echo "Current branch: ${{ github.ref_name }}"
           echo "Latest commit: ${{ github.sha }}"
+          echo "Latest version: ${{ steps.tag.outputs.latest }}"
+          echo "Change type: ${{ steps.analyze.outputs.type }}"
+          echo "Next version: ${{ steps.version.outputs.next }}"
