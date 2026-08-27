@@ -1,0 +1,87 @@
+﻿# Build Folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# DotCover
+.idea/.idea.DotSettings.user
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# NuGet
+*.nupkg
+# NuGet v3's package folder
+packages/
+
+# npm
+node_modules/
+
+# Visual Studio Code
+.vscode/
+
+# Logs
+*.log
+
+# Test Results
+TestResults/
+
+# Coverage files
+coverage*.xml
+coverage*.json
+coverage*.info
+*.coverage
+*.coveragexml
+coverage-report
+
+# Rider / ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Publish output
+publish/
+
+# User-specific files
+*.rsuser
+*.sln.docstates
+
+# IIS Express
+IISExpress/
+
+# Backup & cache files
+*.bak
+*.cache
+*.orig
+*.tmp
+
+# JetBrains Rider
+.idea/
+
+# MongoDB data files (if local db data is inside the project)
+data/
+
+# SQLite database files (if used locally)
+*.db
+
+# Docker related files (if you have)
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Dotnet tools
+.toolstarget/
+.tools/
+
+# Test coverage reports (HTML etc.) - se você quiser ignorar a pasta de relatórios de cobertura
+coveragereport/
+
+# Misc
+*.pdb

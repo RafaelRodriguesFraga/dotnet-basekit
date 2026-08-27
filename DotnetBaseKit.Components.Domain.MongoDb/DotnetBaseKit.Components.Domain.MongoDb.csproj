@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Authors>Rafael Fraga</Authors>
+		<Company>Rafael Fraga</Company>
+		<PackageTags>database, mongodb, nosql, components.domain.mongodb</PackageTags>
+		<IncludeSymbols>False</IncludeSymbols>
+		<Title>DotnetBaseKit.Components.Domain.MongoDb</Title>
+		<Description>Creates base configurations for MongoDB in Domain Layer</Description>
+		<PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+        <PackageReference Include="FluentValidation" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\DotnetBaseKit.Components.Shared\DotnetBaseKit.Components.Shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="README.md">
+			<PackagePath>\</PackagePath>
+			<Pack>True</Pack>
+		</None>
+	</ItemGroup>
+
+</Project>

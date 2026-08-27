@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Moq" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotnetBaseKit.Components.Api\DotnetBaseKit.Components.Api.csproj" />
+    <ProjectReference Include="..\DotnetBaseKit.Components.Infra.MongoDb\DotnetBaseKit.Components.Infra.MongoDb.csproj" />
+    <ProjectReference Include="..\DotnetBaseKit.Components.Shared\DotnetBaseKit.Components.Shared.csproj" />
+    <ProjectReference Include="..\DotnetBaseKit.Components.Application\DotnetBaseKit.Components.Application.csproj" />
+    <ProjectReference Include="..\DotnetBaseKit.Components.Domain.MongoDb\DotnetBaseKit.Components.Domain.MongoDb.csproj" />
+    <ProjectReference Include="..\DotnetBaseKit.Components.Domain.Sql\DotnetBaseKit.Components.Domain.Sql.csproj" />
+  </ItemGroup>
+  
+</Project>

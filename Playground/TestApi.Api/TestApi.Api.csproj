@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DotnetBaseKit.Components.Api\DotnetBaseKit.Components.Api.csproj" />
+    <ProjectReference Include="..\..\DotnetBaseKit.Components.Application\DotnetBaseKit.Components.Application.csproj" />
+    <ProjectReference Include="..\..\DotnetBaseKit.Components.Infra.MongoDb\DotnetBaseKit.Components.Infra.MongoDb.csproj" />
+    <ProjectReference Include="..\..\DotnetBaseKit.Components.Infra.Sql\DotnetBaseKit.Components.Infra.Sql.csproj" />
+    <ProjectReference Include="..\TestApi.Infra.CrossCutting\TestApi.Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\TestApi.Infra.Sql\TestApi.Infra.Sql.csproj" />
+  </ItemGroup>
+
+</Project>
