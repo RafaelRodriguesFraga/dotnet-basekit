@@ -38,7 +38,11 @@ case "$ACTION" in
 
   publish)
     NEXT_VERSION="$3"
-    NUGET_KEY="$4"
+
+     if [ -z "$NUGET_API_KEY" ]; then
+      echo "NUGET_API_KEY is not available." >&2
+      exit 1
+     fi  
 
     dotnet build "${PROJECT_DIR}/DotnetBaseKit.Components.${PROJECT}.csproj" \
       -c Release

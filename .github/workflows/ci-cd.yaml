@@ -147,9 +147,7 @@ jobs:
             publish \
             "$PROJECT" \
             "$NEXT_VERSION" \
-            "$NUGET_API_KEY"
 
-          # 5. Cria tag e GitHub Release (passando $LATEST_TAG)
           ./scripts/process-release.sh \
             tag-and-release \
             "$PROJECT" \
