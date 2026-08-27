@@ -39,8 +39,12 @@ case "$ACTION" in
   publish)
     NEXT_VERSION="$3"
 
+    dotnet build "${PROJECT_DIR}/DotnetBaseKit.Components.${PROJECT}.csproj" \
+      -c Release
+
     dotnet pack "${PROJECT_DIR}/DotnetBaseKit.Components.${PROJECT}.csproj" \
       -c Release \
+      --no-build \
       -p:PackageVersion="$NEXT_VERSION" \
       -o ./artifacts
 
