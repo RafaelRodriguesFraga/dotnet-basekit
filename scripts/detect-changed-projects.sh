@@ -4,7 +4,7 @@ set -e
 BEFORE_SHA="${1:-${GITHUB_EVENT_BEFORE:-}}"
 AFTER_SHA="${2:-${GITHUB_SHA:-HEAD}}"
 
-ALL_PROJECTS=("Api" "Application" "Domain.Mongo" "Api.Domain.Sql" "Infra.Sql" "Infra.MongoDb" "Shared")
+ALL_PROJECTS=("Api" "Application" "Domain.MongoDb" "Domain.Sql" "Infra.Sql" "Infra.MongoDb" "Shared")
 PROJECTS=()
 
 if [ -z "$BEFORE_SHA" ] || \
