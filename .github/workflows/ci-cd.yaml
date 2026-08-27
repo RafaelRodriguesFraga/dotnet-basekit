@@ -103,9 +103,17 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: Nuget Login
+        uses: NuGet/setup-nuget@v1
+        id: nuget-login
+        with:
+         user: rafaelfraga
+
       - name: Process Version and Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUGET_API_KEY: ${{ steps.nuget-login.outputs.NUGET_API_KEY }}
+
         run: |
           chmod +x ./scripts/*.sh
 
@@ -115,12 +123,10 @@ jobs:
           echo "Processing package: $PROJECT"
           echo "========================================"
 
-          # 1. Busca última tag do projeto
           LATEST_TAG=$(./scripts/process-release.sh get-latest-tag "$PROJECT")
 
           echo "Latest tag: $LATEST_TAG"
 
-          # 2. Analisa commits do projeto (Sem a pasta src/)
           PATH_FILTER="DotnetBaseKit.Components.${PROJECT}/"
 
           TYPE=$(./scripts/analyze-commits.sh \
@@ -129,7 +135,6 @@ jobs:
 
           echo "Change type: $TYPE"
 
-          # 3. Calcula nova versão
           NEXT_VERSION=$(./scripts/process-release.sh \
             calculate-version \
             "$PROJECT" \
@@ -138,11 +143,11 @@ jobs:
 
           echo "Next version: $NEXT_VERSION"
 
-          # 4. Compila e empacota (barra final removida)
           ./scripts/process-release.sh \
             publish \
             "$PROJECT" \
-            "$NEXT_VERSION"
+            "$NEXT_VERSION" \
+            "$NUGET_API_KEY"
 
           # 5. Cria tag e GitHub Release (passando $LATEST_TAG)
           ./scripts/process-release.sh \
