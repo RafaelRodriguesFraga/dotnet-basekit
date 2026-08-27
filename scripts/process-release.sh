@@ -11,16 +11,17 @@ case "$ACTION" in
     LATEST_TAG=$(git tag -l "$PROJECT/v*" --sort=-v:refname | head -n 1)
 
     if [ -z "$LATEST_TAG" ]; then
-      LATEST_TAG="$PROJECT/v0.0.0"
+      echo "NONE"
+    else
+      echo "$LATEST_TAG"
     fi
-    echo "$LATEST_TAG"
     ;;
 
   calculate-version)
     LATEST_TAG="$3"
     TYPE="$4"
 
-    if [[ "$LATEST_TAG" == "$PROJECT/v0.0.0" ]]; then
+    if [[ "$LATEST_TAG" == "NONE" ]]; then
       echo "1.0.0"
       exit 0
     fi
