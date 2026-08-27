@@ -38,6 +38,7 @@ case "$ACTION" in
 
   publish)
     NEXT_VERSION="$3"
+    NUGET_KEY="$4"
 
     dotnet build "${PROJECT_DIR}/DotnetBaseKit.Components.${PROJECT}.csproj" \
       -c Release
@@ -49,6 +50,7 @@ case "$ACTION" in
       -o ./artifacts
 
     dotnet nuget push "./artifacts/*.nupkg" \
+      --api-key "$NUGET_KEY" \
       --source "https://api.nuget.org/v3/index.json" \
       --skip-duplicate
     ;;
