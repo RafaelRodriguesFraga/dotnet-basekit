@@ -31,6 +31,7 @@
     <ProjectReference Include="..\DotnetBaseKit.Components.Application\DotnetBaseKit.Components.Application.csproj" />
     <ProjectReference Include="..\DotnetBaseKit.Components.Domain.MongoDb\DotnetBaseKit.Components.Domain.MongoDb.csproj" />
     <ProjectReference Include="..\DotnetBaseKit.Components.Domain.Sql\DotnetBaseKit.Components.Domain.Sql.csproj" />
+    <ProjectReference Include="..\DotnetBaseKit.Components.Infra.Sql\DotnetBaseKit.Components.Infra.Sql.csproj" />
   </ItemGroup>
   
 </Project>
