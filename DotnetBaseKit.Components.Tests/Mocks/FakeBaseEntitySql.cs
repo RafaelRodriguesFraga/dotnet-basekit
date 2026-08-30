@@ -20,6 +20,11 @@ namespace DotnetBaseKit.Components.Tests.Mocks
         {
             Name = name;
         }
+
+        public void ChangeName(string name)
+        {
+            Name = name;
+        }
         public override void Validate()
         {
             var validator = new FakeValidatorSql();
