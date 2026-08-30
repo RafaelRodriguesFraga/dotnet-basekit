@@ -37,6 +37,12 @@ namespace DotnetBaseKit.Components.Infra.Sql
                     services.AddDbContext<TContext>(options => options.UseNpgsql(connectionString, optionsBuilder => optionsBuilder.MigrationsAssembly(typeof(TContext).Assembly.FullName)));
                     break;
 
+                case "SqLite":
+                    connectionString = GetRequiredConnectionString(configuration, "SqliteConnection");
+
+                    services.AddDbContext<TContext>(options => options.UseSqlite(connectionString, optionsBuilder => optionsBuilder.MigrationsAssembly(typeof(TContext).Assembly.FullName)));
+                    break;
+
                 default:
                     throw new NotSupportedException($"Selected database '{selectedDatabase ?? "(not configured)"}' is not supported.");
             }
